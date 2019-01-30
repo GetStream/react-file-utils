@@ -1,7 +1,7 @@
 IconButton
 
 ```js
-<IconButton clickHandler={() => console.log('IconButton clicked!')}>
+<IconButton onClick={() => console.log('IconButton clicked!')}>
   hello
 </IconButton>
 ```

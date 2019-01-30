@@ -6,9 +6,15 @@ import ThumbnailPlaceholder from './ThumbnailPlaceholder';
 import type { ImageUpload } from '../types';
 
 type Props = {|
+  /** The list of image uploads that should be displayed */
   imageUploads?: ImageUpload[],
-  handleRemove?: (id: string) => mixed,
-  handleRetry?: (id: string) => mixed,
+  /** A callback to call when the remove icon is clicked */
+  handleRemove: (id: string) => mixed,
+  /** A callback to call when the retry icon is clicked */
+  handleRetry: (id: string) => mixed,
+  /** A callback to call with newly selected files. If this is not provided no
+   * `ThumbnailPlaceholder` will be displayed.
+   */
   handleFiles?: (files: File[]) => mixed,
 |};
 
