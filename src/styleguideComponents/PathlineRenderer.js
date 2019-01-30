@@ -23,8 +23,7 @@ export function PathlineRenderer({ classes, children }) {
     <div className={classes.pathline}>
       <Link
         href={
-          'https://github.com/GetStream/react-file-utils/blob/master/' +
-          source
+          'https://github.com/GetStream/react-file-utils/blob/master/' + source
         }
         target="blank"
         rel="noopener"
