@@ -1,17 +1,11 @@
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
-import external from 'rollup-plugin-peer-deps-external'
-import postcss from 'rollup-plugin-postcss'
-import url from 'rollup-plugin-url'
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
+import external from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import url from 'rollup-plugin-url';
 import replace from 'rollup-plugin-replace';
 
-import atImport from 'postcss-easy-import';
-import cssnext from 'postcss-cssnext';
-import nested from 'postcss-nested';
-import colorFunction from 'postcss-color-function';
-import vars from 'postcss-simple-vars';
-
-import pkg from './package.json'
+import pkg from './package.json';
 
 export default {
   input: 'src/index.js',
@@ -19,13 +13,13 @@ export default {
     {
       file: pkg.main,
       format: 'cjs',
-      sourcemap: true
+      sourcemap: true,
     },
     {
       file: pkg.module,
       format: 'es',
-      sourcemap: true
-    }
+      sourcemap: true,
+    },
   ],
   external: [
     'react-images',
@@ -56,13 +50,6 @@ export default {
     }),
     external(),
     postcss({
-      plugins: [
-        atImport(),
-        nested(),
-        //vars({ variables }),
-        colorFunction(),
-        cssnext(),
-      ],
       modules: false,
       extract: true,
     }),
@@ -71,6 +58,6 @@ export default {
       runtimeHelpers: true,
       exclude: 'node_modules/**',
     }),
-    commonjs()
-  ]
-}
+    commonjs(),
+  ],
+};

@@ -1,7 +1,5 @@
 // @flow
 
-import * as React from 'react';
-
 export type UploadState = 'uploading' | 'finished' | 'failed';
 
 export type FileLike = Blob | File;

@@ -1,13 +1,17 @@
 {
-  "plugins": [
-    "babel"
-  ],
+  "plugins": ["babel"],
   "extends": [
     "eslint:recommended",
     "plugin:flowtype/recommended",
     "plugin:react/recommended",
     "plugin:jest/recommended"
   ],
+  "settings": {
+    "react": {
+      "version": "detect",
+      "flowVersion": "0.91"
+    }
+  },
   "rules": {
     "no-console": 0,
     "no-mixed-spaces-and-tabs": 1,
@@ -27,17 +31,12 @@
     "require-await": 2,
     "react/prop-types": 0,
     "no-var": 2,
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
-    "semi": [
-      1,
-      "always"
-    ],
+    "linebreak-style": [2, "unix"],
+    "semi": [1, "always"],
     "flowtype/require-valid-file-annotation": [
       0,
-      "always", {
+      "always",
+      {
         "annotationStyle": "line"
       }
     ],
@@ -52,8 +51,8 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2018,
-    "ecmaFeatures" : {
-        "modules": true
+    "ecmaFeatures": {
+      "modules": true
     }
   }
 }

@@ -1,5 +1,6 @@
 *.md
 **/*{.,-}min.js
+example/src/serviceWorker.js
 node_modules/
 /example/build/
 /lib/
