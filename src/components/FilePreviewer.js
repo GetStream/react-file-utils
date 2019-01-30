@@ -20,19 +20,19 @@ export default class FilePreviewer extends React.Component<Props> {
   render() {
     const { uploads, handleRemove, handleRetry } = this.props;
     return (
-      <div className="raf-file-previewer">
+      <div className="rfu-file-previewer">
         <ol>
           {uploads &&
             uploads.map((upload) => (
               <li
                 key={upload.id}
-                className={`raf-file-previewer__file ${
+                className={`rfu-file-previewer__file ${
                   upload.state === 'uploading'
-                    ? 'raf-file-previewer__file--uploading'
+                    ? 'rfu-file-previewer__file--uploading'
                     : ''
                 } ${
                   upload.state === 'failed'
-                    ? 'raf-file-previewer__file--failed'
+                    ? 'rfu-file-previewer__file--failed'
                     : ''
                 }`}
               >
@@ -43,13 +43,13 @@ export default class FilePreviewer extends React.Component<Props> {
                   {upload.state === 'failed' && (
                     <React.Fragment>
                       <div
-                        className="raf-file-previewer__failed"
+                        className="rfu-file-previewer__failed"
                         onClick={handleRetry && (() => handleRetry(upload.id))}
                       >
                         failed
                       </div>
                       <div
-                        className="raf-file-previewer__retry"
+                        className="rfu-file-previewer__retry"
                         onClick={handleRetry && (() => handleRetry(upload.id))}
                       >
                         retry
@@ -59,13 +59,13 @@ export default class FilePreviewer extends React.Component<Props> {
                 </a>
 
                 <span
-                  className="raf-file-previewer__close-button"
+                  className="rfu-file-previewer__close-button"
                   onClick={handleRemove && (() => handleRemove(upload.id))}
                 >
                   ✘
                 </span>
                 {upload.state === 'uploading' && (
-                  <div className="raf-file-previewer__loading-indicator">
+                  <div className="rfu-file-previewer__loading-indicator">
                     <LoadingIndicator />
                   </div>
                 )}

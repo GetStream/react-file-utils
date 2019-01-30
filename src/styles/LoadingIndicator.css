@@ -1,10 +1,10 @@
-.raf-loading-indicator {
+.rfu-loading-indicator {
   margin: 0 auto;
   width: 70px;
   text-align: center;
 }
 
-.raf-loading-indicator > div {
+.rfu-loading-indicator > div {
   width: 18px;
   height: 18px;
   background-color: color($black tint(80%));
@@ -13,11 +13,11 @@
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
-.raf-loading-indicator .bounce1 {
+.rfu-loading-indicator .bounce1 {
   animation-delay: -0.32s;
 }
 
-.raf-loading-indicator .bounce2 {
+.rfu-loading-indicator .bounce2 {
   animation-delay: -0.16s;
 }
 
@@ -40,7 +40,7 @@
   }
 }
 
-.raf-loading-indicator__spinner {
+.rfu-loading-indicator__spinner {
   width: 20px;
   height: 20px;
   border: 2px solid #eee;

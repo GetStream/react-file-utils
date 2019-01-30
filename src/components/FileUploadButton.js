@@ -19,9 +19,9 @@ export default class FileUploadButton extends React.Component<Props> {
 
   render() {
     return (
-      <div className="raf-file-upload-button">
-        <label htmlFor="raf-file-upload-button">
-          <FileInput {...this.props} id="raf-file-upload-button" />
+      <div className="rfu-file-upload-button">
+        <label htmlFor="rfu-file-upload-button">
+          <FileInput {...this.props} id="rfu-file-upload-button" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

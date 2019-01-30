@@ -16,7 +16,7 @@ export default class FileInput extends React.PureComponent<Props> {
       <input
         type="file"
         id={this.props.id}
-        className="raf-file-input"
+        className="rfu-file-input"
         onChange={(event) => {
           this.props.handleFiles(event.currentTarget.files);
         }}

@@ -21,7 +21,7 @@ export default class LoadingIndicator extends React.PureComponent<Props> {
   render() {
     return (
       <div
-        className="raf-loading-indicator__spinner"
+        className="rfu-loading-indicator__spinner"
         style={{
           margin: '0 auto',
           borderColor: this.props.backgroundColor

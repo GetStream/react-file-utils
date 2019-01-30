@@ -1,4 +1,4 @@
-.raf-image-previewer {
+.rfu-image-previewer {
   display: flex;
   flex-wrap: wrap;
   margin: 8px 0;
@@ -13,7 +13,7 @@
     justify-content: center;
 
     &--loaded {
-      .raf-thumbnail__overlay {
+      .rfu-thumbnail__overlay {
         background: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.4) 0%,
@@ -22,11 +22,11 @@
       }
     }
 
-    & .raf-thumbnail__wrapper {
+    & .rfu-thumbnail__wrapper {
       position: absolute;
     }
 
-    & .raf-loading-indicator {
+    & .rfu-loading-indicator {
       position: absolute;
       z-index: $z9;
     }

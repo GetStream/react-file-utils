@@ -14,7 +14,7 @@ export default class IconButton extends React.Component<Props> {
   render() {
     const { onClick, children } = this.props;
     return (
-      <div className="raf-icon-button" role="button" onClick={onClick}>
+      <div className="rfu-icon-button" role="button" onClick={onClick}>
         {children}
       </div>
     );

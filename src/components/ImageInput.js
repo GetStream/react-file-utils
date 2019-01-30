@@ -16,7 +16,7 @@ export default class ImageInput extends React.PureComponent<Props> {
       <input
         type="file"
         id={this.props.id}
-        className="raf-image-input"
+        className="rfu-image-input"
         onChange={(event) => {
           this.props.handleFiles(event.currentTarget.files);
         }}

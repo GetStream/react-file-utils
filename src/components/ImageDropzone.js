@@ -37,13 +37,13 @@ export default class ImageDropzone extends React.PureComponent<Props> {
         disableClick
         disablePreview
         //style={{position: 'absolute', height: '100%', width: '100%', zIndex: -1000000}}
-        className="raf-dropzone"
+        className="rfu-dropzone"
         style={{ position: 'relative' }}
-        acceptClassName="raf-dropzone--accept"
-        rejectClassName="raf-dropzone--reject"
+        acceptClassName="rfu-dropzone--accept"
+        rejectClassName="rfu-dropzone--reject"
       >
-        <div className="raf-dropzone__notifier" style={{}}>
-          <div className="raf-dropzone__inner">
+        <div className="rfu-dropzone__notifier" style={{}}>
+          <div className="rfu-dropzone__inner">
             <svg
               width="41"
               height="41"

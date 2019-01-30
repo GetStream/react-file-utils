@@ -18,9 +18,9 @@ export default class ImageUploadButton extends React.Component<Props> {
   };
   render() {
     return (
-      <div className="raf-image-upload-button">
-        <label htmlFor="raf-image-upload-button">
-          <ImageInput {...this.props} id="raf-image-upload-button" />
+      <div className="rfu-image-upload-button">
+        <label htmlFor="rfu-image-upload-button">
+          <ImageInput {...this.props} id="rfu-image-upload-button" />
           <svg
             role="button"
             width="20"
