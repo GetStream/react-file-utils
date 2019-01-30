@@ -1,3 +1,4 @@
+// @flow
 import './styles/FileInput.css';
 import './styles/FilePreviewer.css';
 import './styles/FileUploadButton.css';
@@ -24,3 +25,5 @@ export {
 } from './components/ThumbnailPlaceholder';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
 export { default as IconButton } from './components/IconButton';
+
+export { dataTransferItemsToFiles, dataTransferItemsHaveFiles } from './utils';
