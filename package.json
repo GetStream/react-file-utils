@@ -29,6 +29,11 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "hooks/pre-commit-format.sh && hooks/pre-commit-reject-binaries.py"
+    }
+  },
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
