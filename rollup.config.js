@@ -21,6 +21,9 @@ export default {
       sourcemap: true,
     },
   ],
+  watch: {
+    chokidar: false,
+  },
   external: [
     'react-images',
     'lodash',

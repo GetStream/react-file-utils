@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-import styles from './styles.css';
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string,
-  };
-
-  render() {
-    const { text } = this.props;
-
-    return <div className={styles.test}>Example Component: {text}</div>;
-  }
-}
+import './styles/FileInput.css';
+import './styles/FilePreviewer.css';
+import './styles/FileUploadButton.css';
+import './styles/IconButton.css';
+import './styles/ImageDropzone.css';
+import './styles/ImageInput.css';
+import './styles/ImagePreviewer.css';
+import './styles/ImageUploadButton.css';
+import './styles/LoadingIndicator.css';
+import './styles/Thumbnail.css';
+import './styles/ThumbnailPlaceholder.css';

@@ -4,7 +4,7 @@
 const path = require('path');
 
 module.exports = {
-  title: 'React Activity Feed - Docs',
+  title: 'React File Utils - Docs',
   styleguideDir: 'docs',
   webpackConfig: require('./webpack.config.styleguidist.js'),
   styleguideComponents: {
