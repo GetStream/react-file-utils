@@ -3,7 +3,7 @@
 > React components that can be used to upload files and images
 
 [![NPM](https://img.shields.io/npm/v/react-activity-feed.svg)](https://www.npmjs.com/package/react-activity-feed)
-[![Build Status](https://travis-ci.org/GetStream/stream-js.svg?branch=master)](https://travis-ci.org/GetStream/react-file-utils)
+[![Build Status](https://travis-ci.com/GetStream/react-file-utils.svg?branch=master)](https://travis-ci.com/GetStream/react-file-utils)
 
 ## Install
 
