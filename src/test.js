@@ -1,10 +1,10 @@
 import {
-  FileInput,
+  AttachmentIcon,
   FilePreviewer,
   FileUploadButton,
   ImageDropzone,
   ImagePreviewer,
-  ImageInput,
+  PictureIcon,
   ImageUploadButton,
   FileIcon,
   Thumbnail,
@@ -13,9 +13,9 @@ import {
   IconButton,
 } from './';
 
-describe('FileInput', () => {
+describe('AttachmentIcon', () => {
   it('is truthy', () => {
-    expect(FileInput).toBeTruthy();
+    expect(AttachmentIcon).toBeTruthy();
   });
 });
 
@@ -43,9 +43,9 @@ describe('ImagePreviewer', () => {
   });
 });
 
-describe('ImageInput', () => {
+describe('PictureIcon', () => {
   it('is truthy', () => {
-    expect(ImageInput).toBeTruthy();
+    expect(PictureIcon).toBeTruthy();
   });
 });
 
