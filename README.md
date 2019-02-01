@@ -1,29 +1,23 @@
 # react-file-utils
 
-> React components for managing files and images
+> React components that can be used to upload files and images
 
-[![NPM](https://img.shields.io/npm/v/react-file-utils.svg)](https://www.npmjs.com/package/react-file-utils) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-activity-feed.svg)](https://www.npmjs.com/package/react-activity-feed)
+[![Build Status](https://travis-ci.org/GetStream/stream-js.svg?branch=master)](https://travis-ci.org/GetStream/react-file-utils)
 
 ## Install
 
 ```bash
+# with npm
 npm install --save react-file-utils
+# with yarn
+yarn add react-file-utils
 ```
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react';
-
-import MyComponent from 'react-file-utils';
-
-class Example extends Component {
-  render() {
-    return <MyComponent />;
-  }
-}
-```
+Look at the [component reference docs](https://getstream.github.io/react-activity-feed/)
 
 ## License
 
-BSD-3-Clause © [GetStream](https://github.com/GetStream)
+BSD-3-Clause © [Stream.io Inc.](https://getstream.io)
