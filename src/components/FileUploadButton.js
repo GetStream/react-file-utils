@@ -1,10 +1,11 @@
 // @flow
 import * as React from 'react';
-import FileInput from './FileInput';
+import AttachmentIcon from './AttachmentIcon';
 
 type Props = {|
   handleFiles: (Blob[]) => mixed,
   multiple: boolean,
+  children: React.Node,
 |};
 
 /**
@@ -12,25 +13,25 @@ type Props = {|
  *
  * @example ./examples/FileUploadButton.md
  */
-export default class FileUploadButton extends React.Component<Props> {
+export default class FileUploadButton extends React.PureComponent<Props> {
   static defaultProps = {
     multiple: false,
+    children: <AttachmentIcon />,
   };
 
   render() {
     return (
       <div className="rfu-file-upload-button">
-        <label htmlFor="rfu-file-upload-button">
-          <FileInput {...this.props} id="rfu-file-upload-button" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="20"
-            viewBox="0 0 24 24"
-          >
-            <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5a2.5 2.5 0 0 1 5 0v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5a2.5 2.5 0 0 0 5 0V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" />
-            <path d="M0 0h24v24H0z" fill="none" />
-          </svg>
+        <label>
+          <input
+            type="file"
+            className="rfu-file-input"
+            onChange={(event) => {
+              this.props.handleFiles(event.currentTarget.files);
+            }}
+            multiple={this.props.multiple}
+          />
+          {this.props.children}
         </label>
       </div>
     );

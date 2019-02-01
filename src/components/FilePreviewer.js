@@ -12,7 +12,7 @@ type Props = {|
 |};
 
 /**
- * Component is described here.
+ * Component that displays files which are being uploaded
  *
  * @example ./examples/FilePreviewer.md
  */
