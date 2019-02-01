@@ -16,7 +16,7 @@ yarn add react-file-utils
 
 ## Usage
 
-Look at the [component reference docs](https://getstream.github.io/react-activity-feed/)
+Look at the [component reference docs](https://getstream.github.io/react-file-utils/)
 
 ## License
 
