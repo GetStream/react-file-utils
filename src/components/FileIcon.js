@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { default as BigFileIcon, defaultStyles } from 'react-file-icon';
 import {
   faFileWord,
   faFileExcel,
@@ -16,7 +17,11 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 
 export type Props = {|
+  filename: ?string,
   mimeType: ?string,
+  big: boolean,
+  // Size used for big icon
+  size: number,
 |};
 
 // Partially based on:
@@ -180,28 +185,33 @@ const mimeTypeToIconMap: { [string]: string } = {
   'application/pdf': faFilePdf,
 };
 
+const mimeTypeToFallBackStyle: { [string]: {} } = {
+  'application/pdf': defaultStyles.pdf,
+};
+
 for (const type of wordMimeTypes) {
   mimeTypeToIconMap[type] = faFileWord;
+  mimeTypeToFallBackStyle[type] = { type: 'document' };
 }
 
 for (const type of excelMimeTypes) {
   mimeTypeToIconMap[type] = faFileExcel;
+  mimeTypeToFallBackStyle[type] = { type: 'spreadsheet' };
 }
 
 for (const type of powerpointMimeTypes) {
   mimeTypeToIconMap[type] = faFilePowerpoint;
-}
-
-for (const type of powerpointMimeTypes) {
-  mimeTypeToIconMap[type] = faFilePowerpoint;
+  mimeTypeToFallBackStyle[type] = { type: 'presentation' };
 }
 
 for (const type of archiveFileTypes) {
   mimeTypeToIconMap[type] = faFileArchive;
+  mimeTypeToFallBackStyle[type] = { type: 'compressed' };
 }
 
 for (const type of codeFileTypes) {
   mimeTypeToIconMap[type] = faFileCode;
+  mimeTypeToFallBackStyle[type] = { type: 'code' };
 }
 
 function mimeTypeToIcon(mimeType: ?string) {
@@ -228,11 +238,81 @@ function mimeTypeToIcon(mimeType: ?string) {
   return faFile;
 }
 
+function mimeTypeToStyle(mimeType: ?string) {
+  if (mimeType == null) {
+    return {};
+  }
+
+  const style = mimeTypeToStyle[mimeType];
+  if (style) {
+    return style;
+  }
+  if (mimeType.startsWith('audio/')) {
+    return { type: 'audio' };
+  }
+  if (mimeType.startsWith('video/')) {
+    return { type: 'video' };
+  }
+  if (mimeType.startsWith('image/')) {
+    return { type: 'image' };
+  }
+  if (mimeType.startsWith('text/')) {
+    return { type: 'document' };
+  }
+  return {};
+}
+
+function fileExtension(filename: ?string) {
+  const defaultReturn = {
+    full: '',
+    end: '',
+  };
+  if (filename == null) {
+    return defaultReturn;
+  }
+
+  // source: https://stackoverflow.com/a/1203361/2570866
+  const a = filename.split('.');
+  if (a.length === 1 || (a[0] === '' && a.length === 2)) {
+    return defaultReturn;
+  }
+  const lastExtension = a.pop().toLowerCase();
+  if (a.length === 1 || (a[0] === '' && a.length === 2)) {
+    return { end: lastExtension, full: lastExtension };
+  }
+  const secondToLastExtension = a.pop().toLowerCase();
+  if (secondToLastExtension !== 'tar') {
+    return { end: lastExtension, full: lastExtension };
+  }
+  return {
+    full: secondToLastExtension + '.' + lastExtension,
+    end: lastExtension,
+  };
+}
+
 /**
  * @example ./examples/FileIcon.md
  */
 export default class FileIcon extends React.Component<Props> {
+  static defaultProps = {
+    big: false,
+    size: 50,
+  };
   render() {
-    return <FontAwesomeIcon icon={mimeTypeToIcon(this.props.mimeType)} />;
+    const { size, big, filename, mimeType } = this.props;
+    if (big) {
+      const extension = fileExtension(filename);
+      let style = defaultStyles[extension.end];
+      if (!style) {
+        style = mimeTypeToStyle(style);
+      }
+      return <BigFileIcon extension={extension.full} {...style} size={size} />;
+    }
+    return (
+      <FontAwesomeIcon
+        className="rfu-file-icon--small"
+        icon={mimeTypeToIcon(mimeType)}
+      />
+    );
   }
 }

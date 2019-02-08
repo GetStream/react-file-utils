@@ -31,6 +31,7 @@ export default {
     'immutable',
     'url-parse',
     'prop-types',
+    'react-file-icon',
     '@fortawesome/react-fontawesome',
     '@fortawesome/free-regular-svg-icons',
     '@babel/runtime/regenerator',

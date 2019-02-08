@@ -1,0 +1,21 @@
+.rfu-file-icon--small {
+  &.svg-inline--fa {
+    color: $fontColor;
+  }
+
+  &.fa-file-excel {
+    color: #207245;
+  }
+
+  &.fa-file-powerpoint {
+    color: #cb4a32;
+  }
+
+  &.fa-file-word {
+    color: #2c599d;
+  }
+
+  &.fa-file-pdf {
+    color: #f82903;
+  }
+}

@@ -36,7 +36,10 @@ export default class FilePreviewer extends React.Component<Props> {
                     : ''
                 }`}
               >
-                <FileIcon mimeType={upload.file.type} />
+                <FileIcon
+                  mimeType={upload.file.type}
+                  filename={upload.file.name}
+                />
 
                 <a href={upload.url} download>
                   {upload.file.name}
