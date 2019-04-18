@@ -6,6 +6,7 @@ type Props = {|
   handleFiles: (Blob[]) => mixed,
   multiple: boolean,
   children: React.Node,
+  disabled: boolean,
 |};
 
 /**
@@ -17,6 +18,7 @@ export default class FileUploadButton extends React.PureComponent<Props> {
   static defaultProps = {
     multiple: false,
     children: <AttachmentIcon />,
+    disabled: false,
   };
 
   render() {
@@ -30,6 +32,7 @@ export default class FileUploadButton extends React.PureComponent<Props> {
               this.props.handleFiles(event.currentTarget.files);
             }}
             multiple={this.props.multiple}
+            disabled={this.props.disabled}
           />
           {this.props.children}
         </label>

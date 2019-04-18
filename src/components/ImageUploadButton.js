@@ -5,6 +5,7 @@ import PictureIcon from './PictureIcon';
 type Props = {|
   handleFiles: (File[]) => mixed,
   multiple: boolean,
+  disabled: boolean,
   children: React.Node,
 |};
 
@@ -16,6 +17,7 @@ type Props = {|
 export default class ImageUploadButton extends React.PureComponent<Props> {
   static defaultProps = {
     multiple: false,
+    disabled: false,
     children: <PictureIcon />,
   };
   render() {
@@ -30,6 +32,7 @@ export default class ImageUploadButton extends React.PureComponent<Props> {
             }}
             accept="image/*"
             multiple={this.props.multiple}
+            disabled={this.props.disabled}
           />
           {this.props.children}
         </label>
