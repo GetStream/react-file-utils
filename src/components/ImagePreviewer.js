@@ -16,6 +16,8 @@ type Props = {|
    * `ThumbnailPlaceholder` will be displayed.
    */
   handleFiles?: (files: File[]) => mixed,
+  /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
+  multiple?: boolean,
 |};
 
 /**
@@ -24,6 +26,10 @@ type Props = {|
  * @example ./examples/ImagePreviewer.md
  */
 export default class ImagePreviewer extends React.Component<Props> {
+  static defaultProps = {
+    multiple: true,
+  };
+
   _handleClose = (id?: string) => {
     if (this.props.handleRemove) {
       if (id == null) {
@@ -73,7 +79,10 @@ export default class ImagePreviewer extends React.Component<Props> {
             </div>
           ))}
         {handleFiles && (
-          <ThumbnailPlaceholder handleFiles={handleFiles} multiple />
+          <ThumbnailPlaceholder
+            handleFiles={handleFiles}
+            multiple={this.props.multiple}
+          />
         )}
       </div>
     );

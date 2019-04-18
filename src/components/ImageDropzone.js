@@ -8,9 +8,24 @@ import type { FileLike } from '../types';
 type Props = {|
   children?: React.Node,
   handleFiles?: (files: $ReadOnlyArray<FileLike>) => mixed,
+  /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
+  multiple: boolean,
+  /** Enable/disable the dropzone */
+  disabled: boolean,
+  /**
+   * Set accepted file types. See https://github.com/okonet/attr-accept for more information. Keep in mind that mime type determination is not reliable across platforms. CSV files, for example, are reported as text/plain under macOS but as application/vnd.ms-excel under Windows. In some cases there might not be a mime type set at all.
+   *
+   * One of type: `string, string[]`
+   */
+  accept?: string | string[],
 |};
 
 export default class ImageDropzone extends React.PureComponent<Props> {
+  static defaultProps = {
+    multiple: true,
+    disabled: false,
+  };
+
   _handleFiles = async (accepted: File[], rejected: DataTransferItem[]) => {
     const { handleFiles } = this.props;
     if (!handleFiles) {
@@ -39,6 +54,9 @@ export default class ImageDropzone extends React.PureComponent<Props> {
         //style={{position: 'absolute', height: '100%', width: '100%', zIndex: -1000000}}
         className="rfu-dropzone"
         style={{ position: 'relative' }}
+        accept={this.props.accept}
+        multiple={this.props.multiple}
+        disabled={this.props.disabled}
         acceptClassName="rfu-dropzone--accept"
         rejectClassName="rfu-dropzone--reject"
       >
