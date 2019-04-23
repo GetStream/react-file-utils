@@ -7,6 +7,7 @@ type Props = {|
   multiple: boolean,
   children: React.Node,
   disabled: boolean,
+  accepts?: string | string[],
 |};
 
 /**
@@ -33,6 +34,11 @@ export default class FileUploadButton extends React.PureComponent<Props> {
             }}
             multiple={this.props.multiple}
             disabled={this.props.disabled}
+            accept={
+              this.props.accepts && typeof this.props.accepts === 'object'
+                ? this.props.accepts.join(',')
+                : this.props.accepts
+            }
           />
           {this.props.children}
         </label>
