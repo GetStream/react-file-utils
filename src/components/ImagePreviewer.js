@@ -80,7 +80,7 @@ export default class ImagePreviewer extends React.Component<Props> {
               )}
             </div>
           ))}
-        {handleFiles && !this.props.disabled && this.props.multiple && (
+        {handleFiles && !this.props.disabled && (
           <ThumbnailPlaceholder
             handleFiles={handleFiles}
             multiple={this.props.multiple}
