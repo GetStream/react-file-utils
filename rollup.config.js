@@ -40,6 +40,7 @@ export default {
     '@babel/runtime/helpers/toConsumableArray',
     '@babel/runtime/helpers/objectSpread',
     '@babel/runtime/helpers/extends',
+    '@babel/runtime/helpers/typeof',
     '@babel/runtime/helpers/defineProperty',
     '@babel/runtime/helpers/assertThisInitialized',
     '@babel/runtime/helpers/inherits',
