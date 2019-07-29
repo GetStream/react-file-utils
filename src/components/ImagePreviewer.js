@@ -67,11 +67,13 @@ export default class ImagePreviewer extends React.Component<Props> {
                 />
               )}
 
-              <Thumbnail
-                handleClose={handleRemove && this._handleClose}
-                image={image.previewUri || image.url}
-                id={image.id}
-              />
+              {image.previewUri !== undefined && (
+                <Thumbnail
+                  handleClose={handleRemove && this._handleClose}
+                  image={image.previewUri}
+                  id={image.id}
+                />
+              )}
               {image.state === 'uploading' && (
                 <LoadingIndicator
                   backgroundColor="rgba(255,255,255,0.1)"

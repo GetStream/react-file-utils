@@ -2686,6 +2686,11 @@ bluebird@^3.5.1, bluebird@^3.5.5:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
   integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
 
+blueimp-load-image@^2.23.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/blueimp-load-image/-/blueimp-load-image-2.23.0.tgz#85cdb20cd14b76f59a2e2e0e7914cb41e5ab2300"
+  integrity sha512-2xLJfgYWXLXDFWhSZC49ahJtdiPKiGld3rEqp3ecOM428PlyuYxR7bq2vGuMfdlBXi8wYXfcs5T6XmU6XxrA7w==
+
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
@@ -5147,16 +5152,6 @@ execall@^1.0.0:
   integrity sha1-c9CQTjlbPKsGWLCNCewlMH8pu3M=
   dependencies:
     clone-regexp "^1.0.0"
-
-exif-js@^2.2.1:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/exif-js/-/exif-js-2.3.0.tgz#9d10819bf571f873813e7640241255ab9ce1a814"
-  integrity sha1-nRCBm/Vx+HOBPnZAJBJVq5zhqBQ=
-
-exif2css@^1.2.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/exif2css/-/exif2css-1.3.0.tgz#1f6c0c2ac7cc1c83da450214d4e8377c8f949660"
-  integrity sha512-RBjZaFcNumDz3bZiZGsR3Kg2jouyLuRnUPox7yE24WcvK8IhVdShAwSQHEqupGC0/DYDZsiunk+sv8CLmu4Lqg==
 
 exit@^0.1.2:
   version "0.1.2"
@@ -11242,14 +11237,6 @@ react-error-overlay@^5.1.0, react-error-overlay@^5.1.4:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-exif-orientation-img@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/react-exif-orientation-img/-/react-exif-orientation-img-0.1.5.tgz#637a64a069e26175c6dfac8133d36e42590fdd40"
-  integrity sha512-Aybc2uN6nXMKSaPNFkJFxVnXcV0HNqd5L9HXz6d55HGA8uAMsGR8vwnlIqWhfqzXrOmr6El49RM95Vuxm/FlcQ==
-  dependencies:
-    exif-js "^2.2.1"
-    exif2css "^1.2.0"
-
 react-file-icon@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/react-file-icon/-/react-file-icon-0.2.0.tgz#93677943e8c91031a62ae9748c0fdbcb6cb4adc5"
@@ -11260,14 +11247,6 @@ react-file-icon@^0.2.0:
     react "^16.2.0"
     react-dom "^16.2.0"
     tinycolor2 "^1.4.1"
-
-react-fix-image-orientation@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/react-fix-image-orientation/-/react-fix-image-orientation-0.1.4.tgz#292f2a9dffb635c96301a79933c877a5280a7ea9"
-  integrity sha512-KMGyxbFrpg4j18VyUGyE5rMvOXbwzpIRbOoPrwSE6tzRkXM+/Ujtfge4HSX4exRIIcpn088FpgRadt2QnttDxg==
-  dependencies:
-    exif-js "^2.2.1"
-    exif2css "^1.2.0"
 
 react-group@^1.0.6:
   version "1.0.6"
