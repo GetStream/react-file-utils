@@ -25,6 +25,7 @@ export default {
     chokidar: false,
   },
   external: [
+    'blueimp-load-image',
     'react-images',
     'lodash',
     'react-dropzone',
