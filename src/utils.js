@@ -1,6 +1,5 @@
 // @flow
 import type { FileLike } from './types';
-// import type { UserResponse } from 'getstream';
 
 // https://stackoverflow.com/a/6860916/2570866
 export function generateRandomId() {
@@ -26,14 +25,8 @@ export function dataTransferItemsHaveFiles(
   return false;
 }
 
-export async function dataTransferItemsToFiles(
-  items: ?(DataTransferItem[]),
-): Promise<FileLike[]> {
-  if (!items || !items.length) {
-    return [];
-  }
+function getFileLikes(items) {
   const fileLikes = [];
-  const blobPromises = [];
   for (const item of items) {
     if (item.kind === 'file') {
       const file = item.getAsFile();
@@ -42,43 +35,54 @@ export async function dataTransferItemsToFiles(
       }
     }
   }
+  return fileLikes;
+}
+
+async function getImageSource(fileLikes, src) {
+  let res;
+  try {
+    res = await fetch(src);
+  } catch (e) {
+    return;
+  }
+  const contentType =
+    res.headers.get('Content-type') || 'application/octet-stream';
+  const buf = await res.arrayBuffer();
+  const blob = new Blob([buf], { type: contentType });
+  fileLikes.push(blob);
+}
+
+const extractImageSources = (s) => {
+  const imageTags = new DOMParser()
+    .parseFromString(s, 'text/html')
+    .getElementsByTagName('img');
+  return Array.from(imageTags, (tag) => tag.src).filter((tag) => tag);
+};
+
+export async function dataTransferItemsToFiles(
+  items: ?(DataTransferItem[]),
+): Promise<FileLike[]> {
+  if (!items || !items.length) {
+    return [];
+  }
+
   // If there are files inside the DataTransferItem prefer those
+  const fileLikes = getFileLikes(items);
   if (fileLikes.length) {
     return fileLikes;
   }
 
   // Otherwise extract images from html
-  const parser = new DOMParser();
+  const blobPromises = [];
   for (const item of items) {
     if (item.type === 'text/html') {
       blobPromises.push(
         new Promise((accept) => {
           item.getAsString(async (s) => {
-            const doc = parser.parseFromString(s, 'text/html');
-            const imageTags = doc.getElementsByTagName('img');
+            const imagePromises = extractImageSources(s).map((src) =>
+              getImageSource(fileLikes, src),
+            );
 
-            const imagePromises = [];
-            for (const tag of imageTags) {
-              if (!tag.src) {
-                continue;
-              }
-              imagePromises.push(
-                (async () => {
-                  let res;
-                  try {
-                    res = await fetch(tag.src);
-                  } catch (e) {
-                    return;
-                  }
-                  const contentType =
-                    res.headers.get('Content-type') ||
-                    'application/octet-stream';
-                  const buf = await res.arrayBuffer();
-                  const blob = new Blob([buf], { type: contentType });
-                  fileLikes.push(blob);
-                })(),
-              );
-            }
             await Promise.all(imagePromises);
             accept();
           });
