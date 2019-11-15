@@ -38,7 +38,16 @@
     }
   },
   "stylelint": {
-    "extends": "stylelint-config-standard"
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ],
+    "plugins": [
+      "stylelint-prettier"
+    ],
+    "rules": {
+      "prettier/prettier": true
+    }
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -84,7 +93,7 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-import": "^12.0.0",
     "postcss-loader": "^3.0.0",
-    "postcss-nested": "^4.1.0",
+    "postcss-nested": "^4.2.1",
     "postcss-safe-parser": "^4.0.1",
     "postcss-simple-vars": "^5.0.1",
     "prettier": "^1.19.1",
@@ -100,7 +109,9 @@
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-url": "^1.4.0",
     "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-prettier": "^1.1.1"
   },
   "files": [
     "dist"

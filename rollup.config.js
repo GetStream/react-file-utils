@@ -58,6 +58,7 @@ export default {
     postcss({
       modules: false,
       extract: true,
+      minimize: true,
     }),
     url(),
     babel({
