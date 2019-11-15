@@ -20,9 +20,7 @@ export { default as FileIcon } from './components/FileIcon';
 export { default as AttachmentIcon } from './components/AttachmentIcon';
 export { default as PictureIcon } from './components/PictureIcon';
 export { default as Thumbnail } from './components/Thumbnail';
-export {
-  default as ThumbnailPlaceholder,
-} from './components/ThumbnailPlaceholder';
+export { default as ThumbnailPlaceholder } from './components/ThumbnailPlaceholder';
 export { default as LoadingIndicator } from './components/LoadingIndicator';
 export { default as IconButton } from './components/IconButton';
 
