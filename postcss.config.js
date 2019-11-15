@@ -34,7 +34,7 @@ const variables = {
 module.exports = {
   plugins: {
     'postcss-easy-import': {},
-    'postcss-cssnext': {},
+    'postcss-cssnext': { warnForDuplicates: false },
     'postcss-simple-vars': { variables },
     'postcss-nested': {},
     'postcss-color-function': {},
