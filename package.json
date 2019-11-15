@@ -1,6 +1,6 @@
 {
   "name": "react-file-utils",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "React components for managing files and images",
   "author": "GetStream",
   "license": "BSD-3-Clause",
@@ -26,11 +26,11 @@
     "build": "rollup -c && flow-copy-source src dist && cp -R src/styles src/images dist/ ",
     "start": "rollup -c -w",
     "preversion": "yarn install && git add yarn.lock",
-    "version": "yarn docs && git add docs && git add example yarn.lock",
+    "version": "yarn docs && git add docs && git add yarn.lock",
     "postversion": "git push && git push --tags && npm publish",
     "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "",
+    "deploy": ""
   },
   "husky": {
     "hooks": {
