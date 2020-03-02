@@ -58,13 +58,16 @@ export default class Thumbnail extends React.PureComponent<Props, State> {
 
     loadImage(
       image,
-      (img) => {
+      (img, data) => {
+        console.log('Original image head: ', data.imageHead);
+        alert('Exif orientation: ' + data.exif.get('Orientation')); // requires exif extension
+        console.log('IPTC data: ', data.iptc); // requires iptc extension
         const base64data = img.toDataURL('image/jpeg');
         this.setState({
           imgSrc: base64data,
         });
       },
-      { orientation: true, crossOrigin: true },
+      { orientation: true, crossOrigin: true, meta: true },
     );
   };
 
