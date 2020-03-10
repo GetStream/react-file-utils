@@ -16,7 +16,7 @@ type Props = {|
  * @example ./examples/FileUploadButton.md
  */
 export default class FileUploadButton extends React.PureComponent<Props> {
-  inputRef = React.createRef<HTMLInputElement>();
+  inputRef: ?HTMLInputElement;
   static defaultProps = {
     multiple: false,
     children: <AttachmentIcon />,
@@ -33,7 +33,8 @@ export default class FileUploadButton extends React.PureComponent<Props> {
             className="rfu-file-input"
             onChange={(event) => {
               this.props.handleFiles(event.currentTarget.files);
-              if (this.inputRef !== null) this.inputRef.value = '';
+              if (this.inputRef !== null && this.inputRef !== undefined)
+                this.inputRef.value = '';
             }}
             multiple={this.props.multiple}
             disabled={this.props.disabled}
