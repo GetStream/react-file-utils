@@ -55,13 +55,12 @@ export default class Thumbnail extends React.PureComponent<Props, State> {
 
   _processImage = () => {
     const { image } = this.props;
-
+    if (!image.indexOf('data:image/jpeg;base64')) {
+      return this.setState({ imgSrc: image });
+    }
     loadImage(
       image,
-      (img, data) => {
-        console.log('Original image head: ', data.imageHead);
-        alert('Exif orientation: ' + data.exif.get('Orientation')); // requires exif extension
-        console.log('IPTC data: ', data.iptc); // requires iptc extension
+      (img) => {
         const base64data = img.toDataURL('image/jpeg');
         this.setState({
           imgSrc: base64data,

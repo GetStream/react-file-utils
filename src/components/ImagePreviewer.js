@@ -67,10 +67,10 @@ export default class ImagePreviewer extends React.Component<Props> {
                 />
               )}
 
-              {image.previewUri !== undefined && (
+              {image.previewUri !== undefined && image.url !== undefined && (
                 <Thumbnail
                   handleClose={handleRemove && this._handleClose}
-                  image={image.previewUri}
+                  image={image.previewUri || image.url}
                   id={image.id}
                 />
               )}
