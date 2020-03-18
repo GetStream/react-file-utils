@@ -56,6 +56,14 @@ export default class Thumbnail extends React.PureComponent<Props, State> {
   _processImage = () => {
     const { image } = this.props;
 
+    /** 
+      if the file is already uploaded we don't need to process the image
+      we check to see if it's base64 string or a url
+     */
+    if (!image.indexOf('data:')) {
+      return this.setState({ imgSrc: image });
+    }
+
     loadImage(
       image,
       (img) => {
@@ -64,7 +72,7 @@ export default class Thumbnail extends React.PureComponent<Props, State> {
           imgSrc: base64data,
         });
       },
-      { orientation: true, crossOrigin: true },
+      { orientation: true, crossOrigin: true, meta: true },
     );
   };
 
