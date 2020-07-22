@@ -67,6 +67,7 @@ export default class Thumbnail extends React.PureComponent<Props, State> {
     loadImage(
       image,
       (img) => {
+        if (!img.toDataURL) return;
         const base64data = img.toDataURL('image/jpeg');
         this.setState({
           imgSrc: base64data,
