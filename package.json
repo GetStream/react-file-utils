@@ -119,7 +119,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-regular-svg-icons": "^5.7.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "blueimp-load-image": "^2.23.0",
+    "blueimp-load-image": "^5.13.0",
     "react-dropzone": "5.1.1",
     "react-file-icon": "^0.2.0"
   }
