@@ -33,8 +33,10 @@ export default class FileUploadButton extends React.PureComponent<Props> {
             className="rfu-file-input"
             onChange={(event) => {
               this.props.handleFiles(event.currentTarget.files);
-              if (this.inputRef !== null && this.inputRef !== undefined)
+              if (this.inputRef !== null && this.inputRef !== undefined) {
                 this.inputRef.value = '';
+                this.inputRef.blur();
+              }
             }}
             multiple={this.props.multiple}
             disabled={this.props.disabled}
