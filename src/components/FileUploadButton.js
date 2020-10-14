@@ -24,8 +24,12 @@ export default class FileUploadButton extends React.PureComponent<Props> {
   };
 
   render() {
+    let className = 'rfu-file-upload-button';
+    if (this.props.disabled) {
+      className = `${className} rfu-file-upload-button--disabled`;
+    }
     return (
-      <div className="rfu-file-upload-button">
+      <div className={className}>
         <label>
           <input
             type="file"
