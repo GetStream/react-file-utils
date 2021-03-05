@@ -1,42 +1,46 @@
-// @flow
-import * as React from 'react';
+import React from 'react';
 import PictureIcon from './PictureIcon';
 
-type Props = {|
-  handleFiles: (File[]) => mixed,
-  multiple: boolean,
-  disabled: boolean,
-  children: React.Node,
-|};
+type Props = {
+  handleFiles: (files: FileList) => any,
+  multiple?: boolean,
+  disabled?: boolean,
+  children?: React.ReactNode,
+};
 
 /**
  * Component is described here.
  *
  * @example ./examples/ImageUploadButton.md
  */
-export default class ImageUploadButton extends React.PureComponent<Props> {
-  static defaultProps = {
-    multiple: false,
-    disabled: false,
-    children: <PictureIcon />,
-  };
-  render() {
-    return (
-      <div className="rfu-image-upload-button">
-        <label>
-          <input
-            type="file"
-            className="rfu-image-input"
-            onChange={(event) => {
-              this.props.handleFiles(event.currentTarget.files);
-            }}
-            accept="image/*"
-            multiple={this.props.multiple}
-            disabled={this.props.disabled}
-          />
-          {this.props.children}
-        </label>
-      </div>
-    );
-  }
-}
+const ImageUploadButton: React.FC<Props> = (props) => {
+  const {
+    multiple = false,
+    disabled = false,
+    handleFiles,
+    children = <PictureIcon />
+  } = props;
+
+  return (
+    <div className="rfu-image-upload-button">
+      <label>
+        <input
+          type="file"
+          className="rfu-image-input"
+          onChange={(event) => {
+            const files = event.currentTarget.files;
+            if (files) {
+              handleFiles(files);
+            }
+          }}
+          accept="image/*"
+          multiple={multiple}
+          disabled={disabled}
+        />
+        {children}
+      </label>
+    </div>
+  );
+};
+
+export default ImageUploadButton;

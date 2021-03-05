@@ -1,54 +1,53 @@
-// @flow
-import React from 'react';
+import React, { useCallback } from 'react';
 import Thumbnail from './Thumbnail';
 import LoadingIndicator from './LoadingIndicator';
 import ThumbnailPlaceholder from './ThumbnailPlaceholder';
 import type { ImageUpload } from '../types';
 
-type Props = {|
+type Props = {
   /** The list of image uploads that should be displayed */
   imageUploads?: ImageUpload[],
   /** A callback to call when the remove icon is clicked */
-  handleRemove: (id: string) => mixed,
+  handleRemove: (id: string) => any,
   /** A callback to call when the retry icon is clicked */
-  handleRetry: (id: string) => mixed,
+  handleRetry: (id: string) => any,
   /** A callback to call with newly selected files. If this is not provided no
    * `ThumbnailPlaceholder` will be displayed.
    */
-  handleFiles?: (files: File[]) => mixed,
+  handleFiles?: (files: FileList) => any,
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean,
   disabled: boolean,
-|};
+};
 
 /**
  * Component is described here.
  *
  * @example ./examples/ImagePreviewer.md
  */
-export default class ImagePreviewer extends React.Component<Props> {
-  static defaultProps = {
-    multiple: true,
-    disabled: false,
-  };
+const ImagePreviewer: React.FC<Props> = (props) => {
+  const {
+    multiple = true,
+    disabled = false,
+    imageUploads,
+    handleRemove,
+    handleRetry,
+    handleFiles,
+  } = props;
 
-  _handleClose = (id?: string) => {
-    if (this.props.handleRemove) {
+  const onClose = useCallback((id?: string) => {
+    if (handleRemove) {
       if (id == null) {
         console.warn("id of closed image was undefined, this shouldn't happen");
         return;
       }
-      this.props.handleRemove(id);
+      handleRemove(id);
     }
-  };
+  }, [handleRemove]);
 
-  render() {
-    const { imageUploads, handleRemove, handleRetry, handleFiles } = this.props;
-
-    return (
-      <div className="rfu-image-previewer">
-        {imageUploads &&
-          imageUploads.map((image) => {
+  return (
+    <div className="rfu-image-previewer">
+        {imageUploads?.map((image) => {
             const url = image.url || image.previewUri;
             return (
               <div
@@ -72,7 +71,7 @@ export default class ImagePreviewer extends React.Component<Props> {
 
                 {url !== undefined && (
                   <Thumbnail
-                    handleClose={handleRemove && this._handleClose}
+                    handleClose={onClose}
                     image={url}
                     id={image.id}
                   />
@@ -86,13 +85,14 @@ export default class ImagePreviewer extends React.Component<Props> {
               </div>
             );
           })}
-        {handleFiles && !this.props.disabled && (
+        {handleFiles && !disabled && (
           <ThumbnailPlaceholder
             handleFiles={handleFiles}
-            multiple={this.props.multiple}
+            multiple={multiple}
           />
         )}
       </div>
-    );
-  }
-}
+  );
+};
+
+export default ImagePreviewer;

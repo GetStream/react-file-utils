@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { default as BigFileIcon, defaultStyles } from 'react-file-icon';
+import { default as BigFileIcon, defaultStyles, DefaultExtensionType, FileIconProps } from 'react-file-icon';
 import {
   faFileWord,
   faFileExcel,
@@ -14,15 +13,16 @@ import {
   faFilePdf,
   faFileAlt,
   faFile,
+  IconDefinition,
 } from '@fortawesome/free-regular-svg-icons';
 
-export type Props = {|
-  filename: ?string,
-  mimeType: ?string,
-  big: boolean,
+export type Props = {
+  filename?: string,
+  mimeType?: string,
+  big?: boolean,
   // Size used for big icon
-  size: number,
-|};
+  size?: number,
+};
 
 // Partially based on:
 // https://stackoverflow.com/a/4212908/2570866
@@ -181,11 +181,11 @@ const codeFileTypes = [
   'application/x-shellscript',
 ];
 
-const mimeTypeToIconMap: { [string]: string } = {
+const mimeTypeToIconMap: { [key: string]: IconDefinition } = {
   'application/pdf': faFilePdf,
 };
 
-const mimeTypeToFallBackStyle: { [string]: {} } = {
+const mimeTypeToFallBackStyle: { [key: string]: Partial<BigFileIcon.FileIconProps> } = {
   'application/pdf': defaultStyles.pdf,
 };
 
@@ -214,7 +214,7 @@ for (const type of codeFileTypes) {
   mimeTypeToFallBackStyle[type] = { type: 'code' };
 }
 
-function mimeTypeToIcon(mimeType: ?string) {
+function mimeTypeToIcon(mimeType?: string) {
   if (mimeType == null) {
     return faFile;
   }
@@ -238,12 +238,12 @@ function mimeTypeToIcon(mimeType: ?string) {
   return faFile;
 }
 
-function mimeTypeToStyle(mimeType: ?string) {
+function mimeTypeToStyle(mimeType?: string): Partial<FileIconProps> {
   if (mimeType == null) {
     return {};
   }
 
-  const style = mimeTypeToStyle[mimeType];
+  const style = mimeTypeToFallBackStyle[mimeType];
   if (style) {
     return style;
   }
@@ -262,7 +262,7 @@ function mimeTypeToStyle(mimeType: ?string) {
   return {};
 }
 
-function fileExtension(filename: ?string) {
+function fileExtension(filename?: string) {
   const defaultReturn = {
     full: '',
     end: '',
@@ -276,11 +276,11 @@ function fileExtension(filename: ?string) {
   if (a.length === 1 || (a[0] === '' && a.length === 2)) {
     return defaultReturn;
   }
-  const lastExtension = a.pop().toLowerCase();
+  const lastExtension = a.pop()?.toLowerCase();
   if (a.length === 1 || (a[0] === '' && a.length === 2)) {
     return { end: lastExtension, full: lastExtension };
   }
-  const secondToLastExtension = a.pop().toLowerCase();
+  const secondToLastExtension = a.pop()?.toLowerCase();
   if (secondToLastExtension !== 'tar') {
     return { end: lastExtension, full: lastExtension };
   }
@@ -293,26 +293,27 @@ function fileExtension(filename: ?string) {
 /**
  * @example ./examples/FileIcon.md
  */
-export default class FileIcon extends React.Component<Props> {
-  static defaultProps = {
-    big: false,
-    size: 50,
-  };
-  render() {
-    const { size, big, filename, mimeType } = this.props;
-    if (big) {
-      const extension = fileExtension(filename);
-      let style = defaultStyles[extension.end];
-      if (!style) {
-        style = mimeTypeToStyle(style);
-      }
-      return <BigFileIcon extension={extension.full} {...style} size={size} />;
+const FileIcon: React.FC<Props> = ({
+  big = false,
+  size = 50,
+  filename,
+  mimeType,
+}) => {
+  if (big) {
+    const extension = fileExtension(filename);
+    let style = extension.end && defaultStyles[extension.end as DefaultExtensionType];
+    if (!style) {
+      style = mimeTypeToStyle(style);
     }
-    return (
-      <FontAwesomeIcon
-        className="rfu-file-icon--small"
-        icon={mimeTypeToIcon(mimeType)}
-      />
-    );
+    // @ts-expect-error types for file-icon are for newer version, which doesn't have a default export
+    return <BigFileIcon extension={extension.full} {...style} size={size} />;
   }
-}
+  return (
+    <FontAwesomeIcon
+      className="rfu-file-icon--small"
+      icon={mimeTypeToIcon(mimeType)}
+    />
+  );
+};
+
+export default FileIcon;

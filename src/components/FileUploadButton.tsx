@@ -1,58 +1,61 @@
-// @flow
-import * as React from 'react';
+import React, { useRef } from 'react';
 import AttachmentIcon from './AttachmentIcon';
 
-type Props = {|
-  handleFiles: (Blob[]) => mixed,
+type Props = {
+  handleFiles: (files: FileList) => any,
   multiple: boolean,
-  children: React.Node,
+  children: React.ReactNode,
   disabled: boolean,
   accepts?: string | string[],
-|};
+};
 
 /**
  * Component is described here.
  *
  * @example ./examples/FileUploadButton.md
  */
-export default class FileUploadButton extends React.PureComponent<Props> {
-  inputRef: ?HTMLInputElement;
-  static defaultProps = {
-    multiple: false,
-    children: <AttachmentIcon />,
-    disabled: false,
-  };
+const FileUploadButton: React.FC<Props> = ({
+  disabled = false,
+  multiple = false,
+  children = <AttachmentIcon />,
+  handleFiles,
+  accepts
+}) => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-  render() {
-    let className = 'rfu-file-upload-button';
-    if (this.props.disabled) {
-      className = `${className} rfu-file-upload-button--disabled`;
-    }
-    return (
-      <div className={className}>
-        <label>
-          <input
-            type="file"
-            ref={(ref) => (this.inputRef = ref)}
-            className="rfu-file-input"
-            onChange={(event) => {
-              this.props.handleFiles(event.currentTarget.files);
-              if (this.inputRef !== null && this.inputRef !== undefined) {
-                this.inputRef.value = '';
-                this.inputRef.blur();
-              }
-            }}
-            multiple={this.props.multiple}
-            disabled={this.props.disabled}
-            accept={
-              this.props.accepts && typeof this.props.accepts === 'object'
-                ? this.props.accepts.join(',')
-                : this.props.accepts
-            }
-          />
-          {this.props.children}
-        </label>
-      </div>
-    );
+  let className = 'rfu-file-upload-button';
+  if (disabled) {
+    className = `${className} rfu-file-upload-button--disabled`;
   }
-}
+  return (
+    <div className={className}>
+      <label>
+        <input
+          type="file"
+          ref={inputRef}
+          className="rfu-file-input"
+          onChange={(event) => {
+            const files = event.currentTarget.files;
+            if (files) {
+              handleFiles(files);
+            }
+            if (inputRef.current !== null && inputRef.current !== undefined) {
+              inputRef.current.value = '';
+              inputRef.current.blur();
+            }
+          }}
+          multiple={multiple}
+          disabled={disabled}
+          accept={
+            Array.isArray(accepts)
+              ? accepts.join(',')
+              : accepts
+          }
+        />
+        {children}
+      </label>
+    </div>
+  );  
+};
+
+export default FileUploadButton;

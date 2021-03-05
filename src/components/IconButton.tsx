@@ -1,22 +1,21 @@
-// @flow
-import * as React from 'react';
+import React from 'react';
 
-export type Props = {|
-  children?: React.Node,
-  onClick?: (e: SyntheticEvent<>) => mixed,
-|};
+export type Props = {
+  children?: React.ReactNode,
+  onClick?: (e: React.SyntheticEvent) => any,
+};
 
 /**
  * This is simply a button wrapper, add's a div with `role="button"` and a onClick
  * @example ./examples/IconButton.md
  */
-export default class IconButton extends React.Component<Props> {
-  render() {
-    const { onClick, children } = this.props;
-    return (
-      <div className="rfu-icon-button" role="button" onClick={onClick}>
-        {children}
-      </div>
-    );
-  }
-}
+const IconButton: React.FC<Props> = ({
+  onClick,
+  children,
+}) => (
+  <div className="rfu-icon-button" role="button" onClick={onClick}>
+    {children}
+  </div>
+);
+
+export default IconButton;
