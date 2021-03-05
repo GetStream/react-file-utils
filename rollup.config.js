@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import url from '@rollup/plugin-url';
+import typescript from '@rollup/plugin-typescript';
 import replace from 'rollup-plugin-replace';
 
 import postcssimport from 'postcss-easy-import';
@@ -46,7 +47,7 @@ const variables = {
 };
 
 export default {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: [
     {
       file: pkg.main,
@@ -89,6 +90,7 @@ export default {
     '@babel/runtime/helpers/classCallCheck',
   ],
   plugins: [
+    typescript(),
     replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
