@@ -1,14 +1,13 @@
-// @flow
 import React from 'react';
 import FileIcon from './FileIcon';
 import LoadingIndicator from './LoadingIndicator';
 import type { FileUpload } from '../types';
 
 type Props = {
-  uploads?: FileUpload[],
-  handleRemove?: (id: string) => any,
-  handleRetry?: (id: string) => any,
-  handleFiles?: (files: File[]) => any,
+  uploads?: FileUpload[];
+  handleRemove?: (id: string) => any;
+  handleRetry?: (id: string) => any;
+  handleFiles?: (files: File[]) => any;
 };
 
 /**
@@ -37,10 +36,7 @@ const FilePreviewer: React.FC<Props> = ({
                 : ''
             }`}
           >
-            <FileIcon
-              mimeType={upload.file.type}
-              filename={upload.file.name}
-            />
+            <FileIcon mimeType={upload.file.type} filename={upload.file.name} />
 
             <a href={upload.url} download>
               {upload.file.name}

@@ -2,10 +2,10 @@ import React from 'react';
 import PictureIcon from './PictureIcon';
 
 type Props = {
-  handleFiles: (files: FileList) => any,
-  multiple?: boolean,
-  disabled?: boolean,
-  children?: React.ReactNode,
+  handleFiles: (files: FileList) => any;
+  multiple?: boolean;
+  disabled?: boolean;
+  children?: React.ReactNode;
 };
 
 /**
@@ -18,7 +18,7 @@ const ImageUploadButton: React.FC<Props> = (props) => {
     multiple = false,
     disabled = false,
     handleFiles,
-    children = <PictureIcon />
+    children = <PictureIcon />,
   } = props;
 
   return (

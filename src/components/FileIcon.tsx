@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { default as BigFileIcon, defaultStyles, DefaultExtensionType, FileIconProps } from 'react-file-icon';
+import {
+  default as BigFileIcon,
+  defaultStyles,
+  DefaultExtensionType,
+  FileIconProps,
+} from 'react-file-icon';
 import {
   faFileWord,
   faFileExcel,
@@ -17,11 +22,11 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 
 export type Props = {
-  filename?: string,
-  mimeType?: string,
-  big?: boolean,
+  filename?: string;
+  mimeType?: string;
+  big?: boolean;
   // Size used for big icon
-  size?: number,
+  size?: number;
 };
 
 // Partially based on:
@@ -185,7 +190,9 @@ const mimeTypeToIconMap: { [key: string]: IconDefinition } = {
   'application/pdf': faFilePdf,
 };
 
-const mimeTypeToFallBackStyle: { [key: string]: Partial<BigFileIcon.FileIconProps> } = {
+const mimeTypeToFallBackStyle: {
+  [key: string]: Partial<BigFileIcon.FileIconProps>;
+} = {
   'application/pdf': defaultStyles.pdf,
 };
 
@@ -301,7 +308,8 @@ const FileIcon: React.FC<Props> = ({
 }) => {
   if (big) {
     const extension = fileExtension(filename);
-    let style = extension.end && defaultStyles[extension.end as DefaultExtensionType];
+    let style =
+      extension.end && defaultStyles[extension.end as DefaultExtensionType];
     if (!style) {
       style = mimeTypeToStyle(style);
     }

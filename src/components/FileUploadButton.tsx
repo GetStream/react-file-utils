@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import AttachmentIcon from './AttachmentIcon';
 
 type Props = {
-  handleFiles: (files: FileList) => any,
-  multiple: boolean,
-  children: React.ReactNode,
-  disabled: boolean,
-  accepts?: string | string[],
+  handleFiles: (files: FileList) => any;
+  multiple: boolean;
+  children: React.ReactNode;
+  disabled: boolean;
+  accepts?: string | string[];
 };
 
 /**
@@ -19,7 +19,7 @@ const FileUploadButton: React.FC<Props> = ({
   multiple = false,
   children = <AttachmentIcon />,
   handleFiles,
-  accepts
+  accepts,
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -46,16 +46,12 @@ const FileUploadButton: React.FC<Props> = ({
           }}
           multiple={multiple}
           disabled={disabled}
-          accept={
-            Array.isArray(accepts)
-              ? accepts.join(',')
-              : accepts
-          }
+          accept={Array.isArray(accepts) ? accepts.join(',') : accepts}
         />
         {children}
       </label>
     </div>
-  );  
+  );
 };
 
 export default FileUploadButton;

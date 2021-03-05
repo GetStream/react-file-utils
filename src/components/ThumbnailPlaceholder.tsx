@@ -1,10 +1,9 @@
-// @flow
 import React from 'react';
 import ImageUploadButton from './ImageUploadButton';
 
-export type Props = {
-  handleFiles: (files: FileList) => any,
-  multiple: boolean,
+type Props = {
+  handleFiles: (files: FileList) => any;
+  multiple: boolean;
 };
 
 /**
@@ -14,10 +13,7 @@ export type Props = {
  */
 
 const ThumbnailPlaceholder: React.FC<Props> = (props) => {
-  const {
-    multiple = false,
-    handleFiles,
-  } = props;
+  const { multiple = false, handleFiles } = props;
 
   return (
     <ImageUploadButton handleFiles={handleFiles} multiple={multiple}>
@@ -37,7 +33,6 @@ const ThumbnailPlaceholder: React.FC<Props> = (props) => {
       </div>
     </ImageUploadButton>
   );
-
 };
 
 export default ThumbnailPlaceholder;
