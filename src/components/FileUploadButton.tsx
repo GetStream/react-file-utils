@@ -39,7 +39,7 @@ const FileUploadButton: React.FC<Props> = ({
             if (files) {
               handleFiles(files);
             }
-            if (inputRef.current !== null && inputRef.current !== undefined) {
+            if (inputRef.current !== null) {
               inputRef.current.value = '';
               inputRef.current.blur();
             }
