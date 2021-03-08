@@ -7,6 +7,7 @@
   "repository": "GetStream/react-file-utils",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
   "jsnext:main": "dist/index.es.js",
   "engines": {
     "node": "10.* || >= 11.* || >= 12.*",
@@ -23,7 +24,8 @@
     "eslint-fix": "eslint --fix '**/*.{js,ts,tsx,md}' --max-warnings 0",
     "lint": "prettier --list-different '**/*.{js,ts,tsx,md,json}' .eslintrc.json .prettierrc .babelrc && eslint '**/*.{js,ts,tsx,md}' --max-warnings 0 && stylelint '**/*.{css,scss}'",
     "lint-fix": "prettier --write '**/*.{js,ts,tsx,md,json}' .eslintrc.json .prettierrc .babelrc && eslint --fix '**/*.{js,ts,tsx,md}' --max-warnings 0 && stylelint --fix '**/*.{css,scss}'",
-    "build": "rollup -c && cp -R src/styles src/images dist/ ",
+    "types": "tsc --strict",
+    "build": "rollup -c && yarn types && cp -R src/styles src/images dist/ ",
     "start": "rollup -c -w",
     "preversion": "yarn install && git add yarn.lock",
     "version": "yarn docs && git add docs && git add yarn.lock",
