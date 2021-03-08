@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": ["esnext", "DOM"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -30,9 +29,11 @@
     "declaration": true,
     "declarationDir": "./dist/types",
     "declarationMap": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "parser": "@typescript-eslint/parser",
   "include": ["./src/**/*.tsx", "./src/**/*.ts", "./import-png.d.ts"],
-  "exclude": ["node_modules", ".babelrc", "jest.config.js", "./test-files/**/*"]
+  "exclude": ["node_modules", ".babelrc", "./test-files/**/*"]
 }
