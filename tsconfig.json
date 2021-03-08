@@ -30,8 +30,7 @@
     "declarationDir": "./dist/types",
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": true
   },
   "parser": "@typescript-eslint/parser",
   "include": ["./src/**/*.tsx", "./src/**/*.ts", "./import-png.d.ts"],
