@@ -1,0 +1,35 @@
+name: test
+
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [10, 12, 14]
+        typescript: ['no']
+        include:
+          - typescript: 'yes'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-${{ matrix.node }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Dependencies & Build
+        run: yarn install --frozen-lockfile --ignore-engines
+
+      - name: Lint and Test with ${{ matrix.node }}
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          TYPESCRIPT: ${{ matrix.typescript }}
+        run: |
+          yarn lint
+          yarn test
+          yarn docs
