@@ -1,4 +1,3 @@
-// @noflow
 /* globals __dirname */
 /* eslint-env commonjs*/
 const path = require('path');
@@ -18,7 +17,7 @@ module.exports = {
     {
       name: 'UI Components',
       // content: 'docs/other-components.md',
-      components: 'src/components/**/*.js',
+      components: 'src/components/**/*.tsx',
       exampleMode: 'collapse',
       usageMode: 'expand',
     },

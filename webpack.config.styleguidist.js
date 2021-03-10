@@ -18,7 +18,7 @@ if (env === 'build') {
 
 const config = {
   mode: mode,
-  entry: __dirname + '/src/index.js',
+  entry: __dirname + '/src/index.ts',
   devtool: 'source-map',
   output: {
     path: __dirname + '/dist',
@@ -34,9 +34,9 @@ const config = {
         exclude: /(node_modules|bower_components)/,
       },
       {
-        test: /(\.jsx|\.js)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
+        test: /(\.ts|\.tsx)$/,
+        loader: 'ts-loader',
+        exclude: /(node_modules|bower_components)/,
       },
       {
         test: /\.(pdf|jpg|png|gif|svg|ico)$/,
@@ -54,6 +54,12 @@ const config = {
   },
   resolve: {
     modules: [path.resolve('./node_modules'), path.resolve('./src')],
+    alias: {
+      'rsg-components': path.join(
+        __dirname,
+        'node_modules/react-styleguidist/lib/client/rsg-components/',
+      ),
+    },
     extensions: ['.json', '.js'],
   },
   externals: {
