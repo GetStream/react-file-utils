@@ -27,5 +27,5 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           yarn lint
-          yarn test
           yarn docs
+          yarn test
