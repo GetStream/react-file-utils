@@ -7,11 +7,6 @@ type Props = {
   width?: number;
 };
 
-/**
- * Component is described here.
- *
- * @example ./examples/LoadingIndicator.md
- */
 const LoadingIndicator: React.FC<Props> = (props) => {
   const { size = 20, width = 2, backgroundColor, color } = props;
 

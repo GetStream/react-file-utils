@@ -8,11 +8,6 @@ type Props = {
   children?: React.ReactNode;
 };
 
-/**
- * Component is described here.
- *
- * @example ./examples/ImageUploadButton.md
- */
 const ImageUploadButton: React.FC<Props> = (props) => {
   const {
     multiple = false,

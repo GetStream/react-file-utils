@@ -12,8 +12,6 @@ type Props = {
 
 /**
  * Component that displays files which are being uploaded
- *
- * @example ./examples/FilePreviewer.md
  */
 const FilePreviewer: React.FC<Props> = ({
   uploads,

@@ -7,7 +7,6 @@ export type Props = {
 
 /**
  * This is simply a button wrapper, add's a div with `role="button"` and a onClick
- * @example ./examples/IconButton.md
  */
 const IconButton: React.FC<Props> = ({ onClick, children }) => (
   <div className="rfu-icon-button" role="button" onClick={onClick}>

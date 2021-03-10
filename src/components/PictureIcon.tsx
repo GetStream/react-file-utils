@@ -2,8 +2,6 @@ import React from 'react';
 
 /**
  * An icon of a picture, which is used as the default icon for ImageUploadButton
- *
- * @example ./examples/PictureIcon.md
  */
 const PictureIcon: React.FC = () => (
   <svg

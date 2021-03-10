@@ -9,11 +9,6 @@ type Props = {
   accepts?: string | string[];
 };
 
-/**
- * Component is described here.
- *
- * @example ./examples/FileUploadButton.md
- */
 const FileUploadButton: React.FC<Props> = ({
   disabled = false,
   multiple = false,

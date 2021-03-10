@@ -6,12 +6,6 @@ type Props = {
   multiple: boolean;
 };
 
-/**
- * Component is described here.
- *
- * @example ./examples/ThumbnailPlaceholder.md
- */
-
 const ThumbnailPlaceholder: React.FC<Props> = (props) => {
   const { multiple = false, handleFiles } = props;
 

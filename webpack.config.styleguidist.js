@@ -29,7 +29,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /(\.jsx|\.js)$/,
+        test: /(\.jsx|\.js\.ts|\.tsx)$/,
         loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/,
       },
@@ -60,7 +60,7 @@ const config = {
         'node_modules/react-styleguidist/lib/client/rsg-components/',
       ),
     },
-    extensions: ['.json', '.js'],
+    extensions: ['.json', '.js', '.ts', '.tsx'],
   },
   externals: {
     react: 'React',

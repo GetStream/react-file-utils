@@ -20,11 +20,6 @@ type Props = {
   disabled: boolean;
 };
 
-/**
- * Component is described here.
- *
- * @example ./examples/ImagePreviewer.md
- */
 const ImagePreviewer: React.FC<Props> = (props) => {
   const {
     multiple = true,

@@ -297,9 +297,6 @@ function fileExtension(filename?: string) {
   };
 }
 
-/**
- * @example ./examples/FileIcon.md
- */
 const FileIcon: React.FC<Props> = ({
   big = false,
   size = 50,
