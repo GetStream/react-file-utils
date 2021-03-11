@@ -2,7 +2,7 @@ import React from 'react';
 import PictureIcon from './PictureIcon';
 
 type Props = {
-  handleFiles: (files: FileList) => any;
+  handleFiles: (files: File[]) => any;
   multiple?: boolean;
   disabled?: boolean;
   children?: React.ReactNode;
@@ -25,7 +25,7 @@ const ImageUploadButton: React.FC<Props> = (props) => {
           onChange={(event) => {
             const files = event.currentTarget.files;
             if (files) {
-              handleFiles(files);
+              handleFiles(Array.from(files));
             }
           }}
           accept="image/*"

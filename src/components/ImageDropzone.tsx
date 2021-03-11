@@ -1,14 +1,13 @@
 import React, { useCallback } from 'react';
 import Dropzone from 'react-dropzone';
-import type { FileLike } from '../types';
 
 type Props = {
   children?: React.ReactNode;
-  handleFiles?: (files: FileLike[]) => any;
+  handleFiles?: (files: File[]) => any;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
-  multiple: boolean;
+  multiple?: boolean;
   /** Enable/disable the dropzone */
-  disabled: boolean;
+  disabled?: boolean;
   /**
    * Set accepted file types. See https://github.com/okonet/attr-accept for more information. Keep in mind that mime type determination is not reliable across platforms. CSV files, for example, are reported as text/plain under macOS but as application/vnd.ms-excel under Windows. In some cases there might not be a mime type set at all.
    *
@@ -27,7 +26,7 @@ const ImageDropzone: React.FC<Props> = ({
   disabled,
 }) => {
   const handleDrop = useCallback(
-    (accepted: FileLike[]) => {
+    (accepted: File[]) => {
       if (!handleFiles) {
         return;
       }

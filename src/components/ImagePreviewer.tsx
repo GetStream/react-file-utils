@@ -8,16 +8,16 @@ type Props = {
   /** The list of image uploads that should be displayed */
   imageUploads?: ImageUpload[];
   /** A callback to call when the remove icon is clicked */
-  handleRemove: (id: string) => any;
+  handleRemove?: (id: string) => any;
   /** A callback to call when the retry icon is clicked */
-  handleRetry: (id: string) => any;
+  handleRetry?: (id: string) => any;
   /** A callback to call with newly selected files. If this is not provided no
    * `ThumbnailPlaceholder` will be displayed.
    */
-  handleFiles?: (files: FileList) => any;
+  handleFiles?: (files: File[]) => any;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 const ImagePreviewer: React.FC<Props> = (props) => {

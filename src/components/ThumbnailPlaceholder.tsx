@@ -2,7 +2,7 @@ import React from 'react';
 import ImageUploadButton from './ImageUploadButton';
 
 type Props = {
-  handleFiles: (files: FileList) => any;
+  handleFiles: (files: File[]) => any;
   multiple: boolean;
 };
 

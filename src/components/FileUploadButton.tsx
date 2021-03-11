@@ -2,10 +2,10 @@ import React, { useRef } from 'react';
 import AttachmentIcon from './AttachmentIcon';
 
 type Props = {
-  handleFiles: (files: FileList) => any;
-  multiple: boolean;
+  handleFiles: (files: File[]) => any;
   children: React.ReactNode;
-  disabled: boolean;
+  multiple?: boolean;
+  disabled?: boolean;
   accepts?: string | string[];
 };
 
@@ -32,7 +32,7 @@ const FileUploadButton: React.FC<Props> = ({
           onChange={(event) => {
             const files = event.currentTarget.files;
             if (files) {
-              handleFiles(files);
+              handleFiles(Array.from(files));
             }
             if (inputRef.current !== null) {
               inputRef.current.value = '';
