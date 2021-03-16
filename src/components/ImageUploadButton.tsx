@@ -3,7 +3,7 @@ import React from 'react';
 import PictureIcon from './PictureIcon';
 
 export type ImageUploadButtonProps = {
-  handleFiles: (files: File[]) => unknown;
+  handleFiles: (files: File[]) => void;
   multiple?: boolean;
   disabled?: boolean;
 };

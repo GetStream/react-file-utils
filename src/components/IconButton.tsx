@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type IconButtonProps = {
-  onClick?: (e: React.SyntheticEvent) => unknown;
+  onClick?: (e: React.SyntheticEvent) => void;
 };
 
 /**

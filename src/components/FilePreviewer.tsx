@@ -7,9 +7,9 @@ import type { FileUpload } from '../types';
 
 export type FilePreviewerProps = {
   uploads?: FileUpload[];
-  handleRemove?: (id: string) => any;
-  handleRetry?: (id: string) => any;
-  handleFiles?: (files: File[]) => any;
+  handleRemove?: (id: string) => void;
+  handleRetry?: (id: string) => void;
+  handleFiles?: (files: File[]) => void;
 };
 
 /**

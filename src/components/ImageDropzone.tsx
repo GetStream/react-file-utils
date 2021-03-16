@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import Dropzone from 'react-dropzone';
 
 export type ImageDropzoneProps = {
-  handleFiles?: (files: File[]) => unknown;
+  handleFiles?: (files: File[]) => void;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean;
   /** Enable/disable the dropzone */

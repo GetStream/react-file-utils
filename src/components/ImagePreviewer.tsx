@@ -10,13 +10,13 @@ export type ImagePreviewerProps = {
   /** The list of image uploads that should be displayed */
   imageUploads?: ImageUpload[];
   /** A callback to call when the remove icon is clicked */
-  handleRemove?: (id: string) => unknown;
+  handleRemove?: (id: string) => void;
   /** A callback to call when the retry icon is clicked */
-  handleRetry?: (id: string) => unknown;
+  handleRetry?: (id: string) => void;
   /** A callback to call with newly selected files. If this is not provided no
    * `ThumbnailPlaceholder` will be displayed.
    */
-  handleFiles?: (files: File[]) => unknown;
+  handleFiles?: (files: File[]) => void;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean;
   disabled?: boolean;

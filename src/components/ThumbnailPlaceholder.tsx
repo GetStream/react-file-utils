@@ -3,7 +3,7 @@ import React from 'react';
 import ImageUploadButton from './ImageUploadButton';
 
 export type ThumbnailPlaceholderProps = {
-  handleFiles: (files: File[]) => unknown;
+  handleFiles: (files: File[]) => void;
   multiple: boolean;
 };
 

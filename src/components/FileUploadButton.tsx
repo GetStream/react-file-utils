@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import AttachmentIcon from './AttachmentIcon';
 
 export type FileUploadButtonProps = {
-  handleFiles: (files: File[]) => any;
+  handleFiles: (files: File[]) => void;
   multiple?: boolean;
   disabled?: boolean;
   accepts?: string | string[];

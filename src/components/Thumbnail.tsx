@@ -6,7 +6,7 @@ import placeholder from '../images/placeholder-generic.png';
 import loadImage from 'blueimp-load-image';
 
 export type ThumbnailProps = {
-  handleClose?: (id?: string) => unknown;
+  handleClose?: (id?: string) => void;
   size?: number;
   image: string;
   id?: string;
