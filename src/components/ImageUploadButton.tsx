@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PictureIcon from './PictureIcon';
 
 export type ImageUploadButtonProps = {

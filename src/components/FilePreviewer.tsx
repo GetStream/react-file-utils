@@ -1,6 +1,8 @@
 import React from 'react';
+
 import FileIcon from './FileIcon';
 import LoadingIndicator from './LoadingIndicator';
+
 import type { FileUpload } from '../types';
 
 export type FilePreviewerProps = {

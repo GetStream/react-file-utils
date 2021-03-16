@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import AttachmentIcon from './AttachmentIcon';
 
 export type FileUploadButtonProps = {
