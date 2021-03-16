@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 
-import Thumbnail from './Thumbnail';
 import LoadingIndicator from './LoadingIndicator';
+import Thumbnail from './Thumbnail';
 import ThumbnailPlaceholder from './ThumbnailPlaceholder';
 
 import type { ImageUpload } from '../types';

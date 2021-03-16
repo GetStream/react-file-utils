@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import IconButton from './IconButton';
 import placeholder from '../images/placeholder-generic.png';

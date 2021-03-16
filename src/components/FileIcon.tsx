@@ -1,11 +1,3 @@
-import * as React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  default as BigFileIcon,
-  defaultStyles,
-  DefaultExtensionType,
-  FileIconProps as ReactFileIconProps,
-} from 'react-file-icon';
 import {
   faFileWord,
   faFileExcel,
@@ -20,6 +12,14 @@ import {
   faFile,
   IconDefinition,
 } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import {
+  default as BigFileIcon,
+  defaultStyles,
+  DefaultExtensionType,
+  FileIconProps as ReactFileIconProps,
+} from 'react-file-icon';
 
 export type FileIconProps = {
   filename?: string;
