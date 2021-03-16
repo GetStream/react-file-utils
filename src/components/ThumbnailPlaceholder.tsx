@@ -1,12 +1,12 @@
 import React from 'react';
 import ImageUploadButton from './ImageUploadButton';
 
-type Props = {
-  handleFiles: (files: File[]) => any;
+export type ThumbnailPlaceholderProps = {
+  handleFiles: (files: File[]) => unknown;
   multiple: boolean;
 };
 
-const ThumbnailPlaceholder: React.FC<Props> = (props) => {
+const ThumbnailPlaceholder: React.FC<ThumbnailPlaceholderProps> = (props) => {
   const { multiple = false, handleFiles } = props;
 
   return (

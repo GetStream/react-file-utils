@@ -4,23 +4,23 @@ import LoadingIndicator from './LoadingIndicator';
 import ThumbnailPlaceholder from './ThumbnailPlaceholder';
 import type { ImageUpload } from '../types';
 
-type Props = {
+export type ImagePreviewerProps = {
   /** The list of image uploads that should be displayed */
   imageUploads?: ImageUpload[];
   /** A callback to call when the remove icon is clicked */
-  handleRemove?: (id: string) => any;
+  handleRemove?: (id: string) => unknown;
   /** A callback to call when the retry icon is clicked */
-  handleRetry?: (id: string) => any;
+  handleRetry?: (id: string) => unknown;
   /** A callback to call with newly selected files. If this is not provided no
    * `ThumbnailPlaceholder` will be displayed.
    */
-  handleFiles?: (files: File[]) => any;
+  handleFiles?: (files: File[]) => unknown;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean;
   disabled?: boolean;
 };
 
-const ImagePreviewer: React.FC<Props> = (props) => {
+const ImagePreviewer: React.FC<ImagePreviewerProps> = (props) => {
   const {
     multiple = true,
     disabled = false,

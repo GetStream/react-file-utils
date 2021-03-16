@@ -1,14 +1,13 @@
 import React from 'react';
 import PictureIcon from './PictureIcon';
 
-type Props = {
-  handleFiles: (files: File[]) => any;
+export type ImageUploadButtonProps = {
+  handleFiles: (files: File[]) => unknown;
   multiple?: boolean;
   disabled?: boolean;
-  children?: React.ReactNode;
 };
 
-const ImageUploadButton: React.FC<Props> = (props) => {
+const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
   const {
     multiple = false,
     disabled = false,

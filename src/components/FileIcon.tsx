@@ -4,7 +4,7 @@ import {
   default as BigFileIcon,
   defaultStyles,
   DefaultExtensionType,
-  FileIconProps,
+  FileIconProps as ReactFileIconProps,
 } from 'react-file-icon';
 import {
   faFileWord,
@@ -21,7 +21,7 @@ import {
   IconDefinition,
 } from '@fortawesome/free-regular-svg-icons';
 
-export type Props = {
+export type FileIconProps = {
   filename?: string;
   mimeType?: string;
   big?: boolean;
@@ -245,7 +245,7 @@ function mimeTypeToIcon(mimeType?: string) {
   return faFile;
 }
 
-function mimeTypeToStyle(mimeType?: string): Partial<FileIconProps> {
+function mimeTypeToStyle(mimeType?: string): Partial<ReactFileIconProps> {
   if (mimeType == null) {
     return {};
   }
@@ -297,7 +297,7 @@ function fileExtension(filename?: string) {
   };
 }
 
-const FileIcon: React.FC<Props> = ({
+const FileIcon: React.FC<FileIconProps> = ({
   big = false,
   size = 50,
   filename,

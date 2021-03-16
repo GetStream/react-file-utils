@@ -3,7 +3,7 @@ import FileIcon from './FileIcon';
 import LoadingIndicator from './LoadingIndicator';
 import type { FileUpload } from '../types';
 
-type Props = {
+export type FilePreviewerProps = {
   uploads?: FileUpload[];
   handleRemove?: (id: string) => any;
   handleRetry?: (id: string) => any;
@@ -13,7 +13,7 @@ type Props = {
 /**
  * Component that displays files which are being uploaded
  */
-const FilePreviewer: React.FC<Props> = ({
+const FilePreviewer: React.FC<FilePreviewerProps> = ({
   uploads,
   handleRemove,
   handleRetry,

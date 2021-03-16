@@ -1,13 +1,13 @@
 import React from 'react';
 
-type Props = {
+export type LoadingIndicatorProps = {
   color?: string;
   backgroundColor?: string;
   size?: number;
   width?: number;
 };
 
-const LoadingIndicator: React.FC<Props> = (props) => {
+const LoadingIndicator: React.FC<LoadingIndicatorProps> = (props) => {
   const { size = 20, width = 2, backgroundColor, color } = props;
 
   return (

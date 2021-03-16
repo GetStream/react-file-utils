@@ -1,15 +1,14 @@
 import React, { useRef } from 'react';
 import AttachmentIcon from './AttachmentIcon';
 
-type Props = {
+export type FileUploadButtonProps = {
   handleFiles: (files: File[]) => any;
-  children: React.ReactNode;
   multiple?: boolean;
   disabled?: boolean;
   accepts?: string | string[];
 };
 
-const FileUploadButton: React.FC<Props> = ({
+const FileUploadButton: React.FC<FileUploadButtonProps> = ({
   disabled = false,
   multiple = false,
   children = <AttachmentIcon />,

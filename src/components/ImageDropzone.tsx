@@ -1,9 +1,8 @@
 import React, { useCallback } from 'react';
 import Dropzone from 'react-dropzone';
 
-type Props = {
-  children?: React.ReactNode;
-  handleFiles?: (files: File[]) => any;
+export type ImageDropzoneProps = {
+  handleFiles?: (files: File[]) => unknown;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean;
   /** Enable/disable the dropzone */
@@ -17,7 +16,7 @@ type Props = {
   maxNumberOfFiles?: number;
 };
 
-const ImageDropzone: React.FC<Props> = ({
+const ImageDropzone: React.FC<ImageDropzoneProps> = ({
   handleFiles,
   maxNumberOfFiles,
   children,
