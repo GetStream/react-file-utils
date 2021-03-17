@@ -1,5 +1,7 @@
 /*! exports provided: ACORN_OPTIONS, default */
 
+/*! exports provided: AttachmentIcon */
+
 /*! exports provided: BlockquoteRenderer, default */
 
 /*! exports provided: COMMON_MIME_TYPES, toFileWithPath */
@@ -32,19 +34,35 @@
 
 /*! exports provided: FILE_INVALID_TYPE, FILE_TOO_LARGE, FILE_TOO_SMALL, TOO_MANY_FILES, getInvalidTypeRejectionErr, getTooLargeRejectionErr, getTooSmallRejectionErr, TOO_MANY_FILES_REJECTION, fileAccepted, fileMatchSize, allFilesAccepted, isPropagationStopped, isEvtWithFiles, isKindFile, onDocumentDragOver, isIeOrEdge, composeEventHandlers */
 
+/*! exports provided: FileIcon */
+
+/*! exports provided: FilePreviewer */
+
+/*! exports provided: FileUploadButton */
+
 /*! exports provided: FontAwesomeIcon */
 
 /*! exports provided: GenIcon, IconBase */
 
 /*! exports provided: HrRenderer, default */
 
+/*! exports provided: IconButton */
+
 /*! exports provided: IconsManifest */
 
 /*! exports provided: IconsManifest, GenIcon, IconBase, DefaultContext, IconContext */
 
+/*! exports provided: ImageDropzone */
+
+/*! exports provided: ImagePreviewer */
+
+/*! exports provided: ImageUploadButton */
+
 /*! exports provided: LinkRenderer, default */
 
 /*! exports provided: ListRenderer, default */
+
+/*! exports provided: LoadingIndicator */
 
 /*! exports provided: LogoRenderer, default */
 
@@ -53,6 +71,8 @@
 /*! exports provided: Node, Parser, Position, SourceLocation, TokContext, Token, TokenType, defaultOptions, getLineInfo, isIdentifierChar, isIdentifierStart, isNewLine, keywordTypes, lineBreak, lineBreakG, nonASCIIwhitespace, parse, parseExpressionAt, tokContexts, tokTypes, tokenizer, version */
 
 /*! exports provided: NotFoundRenderer, default */
+
+/*! exports provided: PictureIcon */
 
 /*! exports provided: PlaygroundErrorRenderer, default */
 
@@ -79,6 +99,10 @@
 /*! exports provided: TableRenderer, default */
 
 /*! exports provided: TableRowRenderer, default */
+
+/*! exports provided: Thumbnail */
+
+/*! exports provided: ThumbnailPlaceholder */
 
 /*! exports provided: VERSION, target, transform */
 
