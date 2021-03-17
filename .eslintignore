@@ -1,11 +1,11 @@
 *.md
 **/*{.,-}min.js
+/**/*.d.ts
 example/src/serviceWorker.js
 node_modules/
 /example/build/
 /lib/
 /dist/
-/flow-typed/
 /docs/
 /.git/
 /test-files/

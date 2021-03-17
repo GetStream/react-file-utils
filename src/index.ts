@@ -1,4 +1,3 @@
-// @flow
 import './styles/App.css';
 import './styles/FileIcon.css';
 import './styles/FilePreviewer.css';

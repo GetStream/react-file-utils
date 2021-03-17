@@ -1,4 +1,3 @@
-// @flow
 import type { FileLike } from './types';
 
 // https://stackoverflow.com/a/6860916/2570866
@@ -12,7 +11,7 @@ function S4() {
 }
 
 export function dataTransferItemsHaveFiles(
-  items: ?(DataTransferItem[]),
+  items?: DataTransferItem[],
 ): boolean {
   if (!items || !items.length) {
     return false;
@@ -25,7 +24,7 @@ export function dataTransferItemsHaveFiles(
   return false;
 }
 
-function getFileLikes(items) {
+function getFileLikes(items: DataTransferItem[]) {
   const fileLikes = [];
   for (const item of items) {
     if (item.kind === 'file') {
@@ -38,7 +37,7 @@ function getFileLikes(items) {
   return fileLikes;
 }
 
-async function getImageSource(fileLikes, src) {
+async function getImageSource(fileLikes: FileLike[], src: string) {
   let res;
   try {
     res = await fetch(src);
@@ -52,7 +51,7 @@ async function getImageSource(fileLikes, src) {
   fileLikes.push(blob);
 }
 
-const extractImageSources = (s) => {
+const extractImageSources = (s: string) => {
   const imageTags = new DOMParser()
     .parseFromString(s, 'text/html')
     .getElementsByTagName('img');
@@ -60,7 +59,7 @@ const extractImageSources = (s) => {
 };
 
 export async function dataTransferItemsToFiles(
-  items: ?(DataTransferItem[]),
+  items?: DataTransferItem[],
 ): Promise<FileLike[]> {
   if (!items || !items.length) {
     return [];
@@ -77,7 +76,7 @@ export async function dataTransferItemsToFiles(
   for (const item of items) {
     if (item.type === 'text/html') {
       blobPromises.push(
-        new Promise((accept) => {
+        new Promise<void>((accept) => {
           item.getAsString(async (s) => {
             const imagePromises = extractImageSources(s).map((src) =>
               getImageSource(fileLikes, src),

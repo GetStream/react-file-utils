@@ -11,7 +11,7 @@ import {
   ThumbnailPlaceholder,
   LoadingIndicator,
   IconButton,
-} from './';
+} from '.';
 
 describe('AttachmentIcon', () => {
   it('is truthy', () => {
