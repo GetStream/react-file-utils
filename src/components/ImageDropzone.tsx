@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import Dropzone from 'react-dropzone';
 
 export type ImageDropzoneProps = {
-  handleFiles?: (files: File[]) => void;
+  handleFiles?: (files: FileList | File[]) => void;
   /** Allow drag 'n' drop (or selection from the file dialog) of multiple files */
   multiple?: boolean;
   /** Enable/disable the dropzone */
@@ -16,7 +16,7 @@ export type ImageDropzoneProps = {
   maxNumberOfFiles?: number;
 };
 
-const ImageDropzone: React.FC<ImageDropzoneProps> = ({
+export const ImageDropzone: React.FC<ImageDropzoneProps> = ({
   handleFiles,
   maxNumberOfFiles,
   children,
@@ -79,5 +79,3 @@ const ImageDropzone: React.FC<ImageDropzoneProps> = ({
     </Dropzone>
   );
 };
-
-export default ImageDropzone;

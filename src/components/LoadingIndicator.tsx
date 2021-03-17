@@ -7,7 +7,7 @@ export type LoadingIndicatorProps = {
   width?: number;
 };
 
-const LoadingIndicator: React.FC<LoadingIndicatorProps> = (props) => {
+export const LoadingIndicator: React.FC<LoadingIndicatorProps> = (props) => {
   const { size = 20, width = 2, backgroundColor, color } = props;
 
   return (
@@ -24,5 +24,3 @@ const LoadingIndicator: React.FC<LoadingIndicatorProps> = (props) => {
     />
   );
 };
-
-export default LoadingIndicator;

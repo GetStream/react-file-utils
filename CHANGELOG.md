@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [1.0.1](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.0) 2021-03-17
+
+- Sync up types with `stream-chat-react` library [#25](https://github.com/GetStream/react-file-utils/pull/25)
+
 ## [1.0.0](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.0) 2021-03-17
 
 - The entire library has been rewritten in TypeScript [#24](https://github.com/GetStream/react-file-utils/pull/24)

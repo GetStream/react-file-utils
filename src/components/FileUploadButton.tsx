@@ -1,15 +1,15 @@
 import React, { useRef } from 'react';
 
-import AttachmentIcon from './AttachmentIcon';
+import { AttachmentIcon } from './AttachmentIcon';
 
 export type FileUploadButtonProps = {
-  handleFiles: (files: File[]) => void;
+  handleFiles: (files: FileList | File[]) => void;
   multiple?: boolean;
   disabled?: boolean;
   accepts?: string | string[];
 };
 
-const FileUploadButton: React.FC<FileUploadButtonProps> = ({
+export const FileUploadButton: React.FC<FileUploadButtonProps> = ({
   disabled = false,
   multiple = false,
   children = <AttachmentIcon />,
@@ -32,7 +32,7 @@ const FileUploadButton: React.FC<FileUploadButtonProps> = ({
           onChange={(event) => {
             const files = event.currentTarget.files;
             if (files) {
-              handleFiles(Array.from(files));
+              handleFiles(files);
             }
             if (inputRef.current !== null) {
               inputRef.current.value = '';
@@ -48,5 +48,3 @@ const FileUploadButton: React.FC<FileUploadButtonProps> = ({
     </div>
   );
 };
-
-export default FileUploadButton;

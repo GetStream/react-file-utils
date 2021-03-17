@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * An icon of a picture, which is used as the default icon for ImageUploadButton
  */
-const PictureIcon: React.FC = () => (
+export const PictureIcon: React.FC = () => (
   <svg
     width="20"
     height="20"
@@ -16,5 +16,3 @@ const PictureIcon: React.FC = () => (
     />
   </svg>
 );
-
-export default PictureIcon;
