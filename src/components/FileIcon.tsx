@@ -297,7 +297,7 @@ function fileExtension(filename?: string) {
   };
 }
 
-const FileIcon: React.FC<FileIconProps> = ({
+export const FileIcon: React.FC<FileIconProps> = ({
   big = false,
   size = 50,
   filename,
@@ -320,5 +320,3 @@ const FileIcon: React.FC<FileIconProps> = ({
     />
   );
 };
-
-export default FileIcon;

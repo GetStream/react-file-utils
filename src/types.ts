@@ -4,15 +4,25 @@ export type FileLike = Blob | File;
 
 export type UploadInfo = {
   id: string;
-  url?: string;
   state: UploadState;
+  url?: string;
 };
 
 export type FileUpload = {
-  file: File;
+  file: {
+    name: string;
+    size?: number | string;
+    type?: string;
+    uri?: string;
+  };
 } & UploadInfo;
 
 export type ImageUpload = {
-  file: Blob | File;
+  file: {
+    height?: number;
+    name?: string;
+    uri?: string;
+    width?: number;
+  };
   previewUri?: string;
 } & UploadInfo;

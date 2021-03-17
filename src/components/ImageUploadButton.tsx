@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PictureIcon from './PictureIcon';
+import { PictureIcon } from './PictureIcon';
 
 export type ImageUploadButtonProps = {
   handleFiles: (files: File[]) => void;
@@ -8,7 +8,7 @@ export type ImageUploadButtonProps = {
   disabled?: boolean;
 };
 
-const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
+export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
   const {
     multiple = false,
     disabled = false,
@@ -37,5 +37,3 @@ const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
     </div>
   );
 };
-
-export default ImageUploadButton;

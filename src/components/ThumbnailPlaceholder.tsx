@@ -1,13 +1,15 @@
 import React from 'react';
 
-import ImageUploadButton from './ImageUploadButton';
+import { ImageUploadButton } from './ImageUploadButton';
 
 export type ThumbnailPlaceholderProps = {
   handleFiles: (files: File[]) => void;
   multiple: boolean;
 };
 
-const ThumbnailPlaceholder: React.FC<ThumbnailPlaceholderProps> = (props) => {
+export const ThumbnailPlaceholder: React.FC<ThumbnailPlaceholderProps> = (
+  props,
+) => {
   const { multiple = false, handleFiles } = props;
 
   return (
@@ -29,5 +31,3 @@ const ThumbnailPlaceholder: React.FC<ThumbnailPlaceholderProps> = (props) => {
     </ImageUploadButton>
   );
 };
-
-export default ThumbnailPlaceholder;

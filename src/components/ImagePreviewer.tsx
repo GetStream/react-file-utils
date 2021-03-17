@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 
-import LoadingIndicator from './LoadingIndicator';
-import Thumbnail from './Thumbnail';
-import ThumbnailPlaceholder from './ThumbnailPlaceholder';
+import { LoadingIndicator } from './LoadingIndicator';
+import { Thumbnail } from './Thumbnail';
+import { ThumbnailPlaceholder } from './ThumbnailPlaceholder';
 
 import type { ImageUpload } from '../types';
 
@@ -22,7 +22,7 @@ export type ImagePreviewerProps = {
   disabled?: boolean;
 };
 
-const ImagePreviewer: React.FC<ImagePreviewerProps> = (props) => {
+export const ImagePreviewer: React.FC<ImagePreviewerProps> = (props) => {
   const {
     multiple = true,
     disabled = false,
@@ -89,5 +89,3 @@ const ImagePreviewer: React.FC<ImagePreviewerProps> = (props) => {
     </div>
   );
 };
-
-export default ImagePreviewer;
