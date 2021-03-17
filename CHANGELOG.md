@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [1.0.0](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.0) 2021-03-17
+
+- The entire library has been rewritten in TypeScript [#24](https://github.com/GetStream/react-file-utils/pull/24)
+- The entire library has been converted to functional components [#24](https://github.com/GetStream/react-file-utils/pull/24)
+
 ## [0.4.0](https://github.com/GetStream/react-file-utils/releases/tag/v0.4.0) 2020-10-15
 
 - Updated react-dropzone to `11.2.0`. Copying images from other websites is no longer supported.
