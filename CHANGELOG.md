@@ -1,7 +1,10 @@
 # Changelog
 
+## [1.0.2](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.2) 2021-03-17
 
-## [1.0.1](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.0) 2021-03-17
+- Fix TSConfig so jsx-runtime is not required [#26](https://github.com/GetStream/react-file-utils/pull/26)
+
+## [1.0.1](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.1) 2021-03-17
 
 - Sync up types with `stream-chat-react` library [#25](https://github.com/GetStream/react-file-utils/pull/25)
 
