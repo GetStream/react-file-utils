@@ -92,3 +92,20 @@ export async function dataTransferItemsToFiles(
   await Promise.all(blobPromises);
   return fileLikes;
 }
+
+export const handleFileChange = (
+  callback?: (files: Array<File>) => void,
+  resetOnChange: boolean = false,
+) => ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
+  const files = currentTarget.files;
+
+  if (!files) return;
+
+  try {
+    callback?.(Array.from(files));
+  } catch (error) {
+    console.error(error);
+  }
+
+  if (resetOnChange) currentTarget.value = '';
+};
