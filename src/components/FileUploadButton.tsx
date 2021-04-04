@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AttachmentIcon } from './AttachmentIcon';
-import { handleFileChange } from '../utils';
+import { useHandleFileChangeWrapper } from '../utils';
 
 export type FileUploadButtonProps = {
   handleFiles: (files: FileList | File[]) => void;
@@ -17,19 +17,22 @@ export const FileUploadButton: React.FC<FileUploadButtonProps> = ({
   children = <AttachmentIcon />,
   handleFiles,
   accepts,
-  resetOnChange = false,
+  resetOnChange = true,
 }) => {
   let className = 'rfu-file-upload-button';
   if (disabled) {
     className = `${className} rfu-file-upload-button--disabled`;
   }
+
+  const onFileChange = useHandleFileChangeWrapper(resetOnChange, handleFiles);
+
   return (
     <div className={className}>
       <label>
         <input
           type="file"
           className="rfu-file-input"
-          onChange={handleFileChange(handleFiles, resetOnChange)}
+          onChange={onFileChange}
           multiple={multiple}
           disabled={disabled}
           accept={Array.isArray(accepts) ? accepts.join(',') : accepts}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PictureIcon } from './PictureIcon';
-import { handleFileChange } from '../utils';
+import { useHandleFileChangeWrapper } from '../utils';
 
 export type ImageUploadButtonProps = {
   handleFiles: (files: File[]) => void;
@@ -19,13 +19,15 @@ export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
     resetOnChange = false,
   } = props;
 
+  const onFileChange = useHandleFileChangeWrapper(resetOnChange, handleFiles);
+
   return (
     <div className="rfu-image-upload-button">
       <label>
         <input
           type="file"
           className="rfu-image-input"
-          onChange={handleFileChange(handleFiles, resetOnChange)}
+          onChange={onFileChange}
           accept="image/*"
           multiple={multiple}
           disabled={disabled}
