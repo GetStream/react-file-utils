@@ -1,5 +1,4 @@
 import type { FileLike } from './types';
-import { useCallback } from 'react';
 
 // https://stackoverflow.com/a/6860916/2570866
 export function generateRandomId() {
@@ -96,21 +95,17 @@ export async function dataTransferItemsToFiles(
 
 export const useHandleFileChangeWrapper = (
   resetOnChange: boolean = false,
-  callback?: (files: Array<File>) => void,
-) =>
-  useCallback(
-    ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
-      const { files } = currentTarget;
+  handler?: (files: Array<File>) => void,
+) => ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
+  const { files } = currentTarget;
 
-      if (!files) return;
+  if (!files) return;
 
-      try {
-        callback?.(Array.from(files));
-      } catch (error) {
-        console.error(error);
-      }
+  try {
+    handler?.(Array.from(files));
+  } catch (error) {
+    console.error(error);
+  }
 
-      if (resetOnChange) currentTarget.value = '';
-    },
-    [callback, resetOnChange],
-  );
+  if (resetOnChange) currentTarget.value = '';
+};
