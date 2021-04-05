@@ -92,3 +92,20 @@ export async function dataTransferItemsToFiles(
   await Promise.all(blobPromises);
   return fileLikes;
 }
+
+export const useHandleFileChangeWrapper = (
+  resetOnChange: boolean = false,
+  handler?: (files: Array<File>) => void,
+) => ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
+  const { files } = currentTarget;
+
+  if (!files) return;
+
+  try {
+    handler?.(Array.from(files));
+  } catch (error) {
+    console.error(error);
+  }
+
+  if (resetOnChange) currentTarget.value = '';
+};

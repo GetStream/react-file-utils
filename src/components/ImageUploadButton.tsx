@@ -1,11 +1,13 @@
 import React from 'react';
 
 import { PictureIcon } from './PictureIcon';
+import { useHandleFileChangeWrapper } from '../utils';
 
 export type ImageUploadButtonProps = {
   handleFiles: (files: File[]) => void;
   multiple?: boolean;
   disabled?: boolean;
+  resetOnChange?: boolean;
 };
 
 export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
@@ -14,7 +16,10 @@ export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
     disabled = false,
     handleFiles,
     children = <PictureIcon />,
+    resetOnChange = false,
   } = props;
+
+  const onFileChange = useHandleFileChangeWrapper(resetOnChange, handleFiles);
 
   return (
     <div className="rfu-image-upload-button">
@@ -22,12 +27,7 @@ export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
         <input
           type="file"
           className="rfu-image-input"
-          onChange={(event) => {
-            const files = event.currentTarget.files;
-            if (files) {
-              handleFiles(Array.from(files));
-            }
-          }}
+          onChange={onFileChange}
           accept="image/*"
           multiple={multiple}
           disabled={disabled}
