@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.3](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.3) 2021-04-05
+
+- Add `resetOnChange` prop and custom handler for file/image upload buttons [#27](https://github.com/GetStream/react-file-utils/pull/27)
+
 ## [1.0.2](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.2) 2021-03-17
 
 - Fix TSConfig so jsx-runtime is not required [#26](https://github.com/GetStream/react-file-utils/pull/26)
