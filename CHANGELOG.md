@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.4](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.4) 2021-05-10
+
+- Support thumbnail previews for HEIC type images [#28](https://github.com/GetStream/react-file-utils/pull/28)
+
 ## [1.0.3](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.3) 2021-04-05
 
 - Add `resetOnChange` prop and custom handler for file/image upload buttons [#27](https://github.com/GetStream/react-file-utils/pull/27)
