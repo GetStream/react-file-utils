@@ -40,13 +40,15 @@ export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
         { orientation: true, crossOrigin: 'anonymous', meta: true },
       );
     }
-  }, [imgSrc, image]);
+  }, [image]);
 
   const onClose = useCallback(() => {
     if (handleClose) {
       handleClose(id);
     }
   }, [id, handleClose]);
+
+  const imageToPreview = image.includes('.HEIC') ? image : imgSrc;
 
   return (
     <div
@@ -61,7 +63,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
         ) : null}
       </div>
       <img
-        src={imgSrc || image || placeholder}
+        src={imageToPreview || placeholder}
         className="rfu-thumbnail__image"
         alt=""
       />
