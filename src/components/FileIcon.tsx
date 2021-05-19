@@ -149,7 +149,5 @@ export const FileIcon: React.FC<FileIconProps> = ({
 
   const Icon = mimeTypeToIcon(mimeType);
 
-  if (!Icon) return null;
-
   return <Icon />;
 };
