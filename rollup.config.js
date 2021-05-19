@@ -72,8 +72,6 @@ export default {
     'url-parse',
     'prop-types',
     'react-file-icon',
-    '@fortawesome/react-fontawesome',
-    '@fortawesome/free-regular-svg-icons',
     '@babel/runtime/regenerator',
     '@babel/runtime/helpers/asyncToGenerator',
     '@babel/runtime/helpers/objectWithoutProperties',
