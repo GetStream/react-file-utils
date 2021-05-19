@@ -1,5 +1,4 @@
 import './styles/App.css';
-import './styles/FileIcon.css';
 import './styles/FilePreviewer.css';
 import './styles/FileUploadButton.css';
 import './styles/IconButton.css';
