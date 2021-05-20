@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/GetStream/react-file-utils/releases/tag/v1.1.0) 2021-05-20
+
+### Chore
+
+- Replace Fort Awesome libraries with SVG components [#29](https://github.com/GetStream/react-file-utils/pull/29)
+- Add `size-limit` bundle analyzer [#30](https://github.com/GetStream/react-file-utils/pull/30)
+- Replace `react-file-icon` with simple SVG components [#31](https://github.com/GetStream/react-file-utils/pull/31)
+- Remove unnecessary `blueimp-load-image` dependency [#32](https://github.com/GetStream/react-file-utils/pull/32)
+
 ## [1.0.4](https://github.com/GetStream/react-file-utils/releases/tag/v1.0.4) 2021-05-10
 
 - Support thumbnail previews for HEIC type images [#28](https://github.com/GetStream/react-file-utils/pull/28)
