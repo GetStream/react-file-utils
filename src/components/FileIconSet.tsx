@@ -4,11 +4,11 @@
  */
 import React from 'react';
 
-export const FilePdfIcon: React.FC = () => (
+export const FilePdfIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-pdf"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -19,11 +19,11 @@ export const FilePdfIcon: React.FC = () => (
   </svg>
 );
 
-export const FileWordIcon: React.FC = () => (
+export const FileWordIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-word"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -34,11 +34,13 @@ export const FileWordIcon: React.FC = () => (
   </svg>
 );
 
-export const FilePowerPointIcon: React.FC = () => (
+export const FilePowerPointIcon: React.FC<{ size?: number }> = ({
+  size = 20,
+}) => (
   <svg
     className="rfu-file-icon--small fa-file-powerpoint"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -49,11 +51,11 @@ export const FilePowerPointIcon: React.FC = () => (
   </svg>
 );
 
-export const FileExcelIcon: React.FC = () => (
+export const FileExcelIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-excel"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -64,11 +66,11 @@ export const FileExcelIcon: React.FC = () => (
   </svg>
 );
 
-export const FileArchiveIcon: React.FC = () => (
+export const FileArchiveIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-archive"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -79,11 +81,11 @@ export const FileArchiveIcon: React.FC = () => (
   </svg>
 );
 
-export const FileCodeIcon: React.FC = () => (
+export const FileCodeIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-code"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -94,11 +96,11 @@ export const FileCodeIcon: React.FC = () => (
   </svg>
 );
 
-export const FileAudioIcon: React.FC = () => (
+export const FileAudioIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-audio"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -109,11 +111,11 @@ export const FileAudioIcon: React.FC = () => (
   </svg>
 );
 
-export const FileVideoIcon: React.FC = () => (
+export const FileVideoIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-video"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -124,11 +126,11 @@ export const FileVideoIcon: React.FC = () => (
   </svg>
 );
 
-export const FileImageIcon: React.FC = () => (
+export const FileImageIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-image"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -139,11 +141,11 @@ export const FileImageIcon: React.FC = () => (
   </svg>
 );
 
-export const FileAltIcon: React.FC = () => (
+export const FileAltIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   <svg
     className="rfu-file-icon--small fa-file-alt"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
@@ -154,11 +156,13 @@ export const FileAltIcon: React.FC = () => (
   </svg>
 );
 
-export const FileFallbackIcon: React.FC = () => (
+export const FileFallbackIcon: React.FC<{ size?: number }> = ({
+  size = 20,
+}) => (
   <svg
     className="rfu-file-icon--small fa-file-fallback"
-    height="20"
-    width="20"
+    height={size}
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 384 512"
   >
