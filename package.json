@@ -60,8 +60,6 @@
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.13.10",
     "@babel/node": "^7.0.0",
-    "@size-limit/preset-big-lib": "^4.10.2",
-    "size-limit": "^4.10.2",
     "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
@@ -71,6 +69,7 @@
     "@babel/runtime-corejs2": "^7.13.10",
     "@rollup/plugin-typescript": "^8.2.0",
     "@rollup/plugin-url": "^4.0.0",
+    "@size-limit/preset-big-lib": "^4.10.2",
     "@types/blueimp-load-image": "^5.14.1",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.2",
@@ -116,6 +115,7 @@
     "rollup-plugin-postcss": "^2.0.0",
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-url": "^1.4.0",
+    "size-limit": "^4.10.2",
     "stylelint": "^9.10.1",
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-standard": "^18.2.0",
@@ -141,7 +141,6 @@
   ],
   "dependencies": {
     "blueimp-load-image": "^5.13.0",
-    "react-dropzone": "11.2.0",
-    "react-file-icon": "^0.2.0"
+    "react-dropzone": "11.2.0"
   }
 }
