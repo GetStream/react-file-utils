@@ -3,8 +3,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { IconButton } from './IconButton';
 import placeholder from '../images/placeholder-generic.png';
 
-import loadImage from 'blueimp-load-image';
-
 export type ThumbnailProps = {
   handleClose?: (id?: string) => void;
   size?: number;
@@ -21,24 +19,9 @@ export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!imgSrc && image) {
-      /** 
-      if the file is already uploaded we don't need to process the image
-      we check to see if it's base64 string or a url
-      */
-      if (!image.indexOf('data:')) {
-        return setImgSrc(image);
-      }
-
-      loadImage(
-        image,
-        (img) => {
-          if (!('toDataURL' in img)) return;
-          const base64data = img.toDataURL('image/jpeg');
-          setImgSrc(base64data);
-        },
-        { orientation: true, crossOrigin: 'anonymous', meta: true },
-      );
+    // if upload is a base64 string set as image source, otherwise wait for CDN response
+    if (!imgSrc && image?.startsWith('data:')) {
+      setImgSrc(image);
     }
   }, [image]);
 
