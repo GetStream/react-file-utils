@@ -27,6 +27,7 @@
     "types": "tsc --strict --emitDeclarationOnly true",
     "build": "rollup -c && yarn types && cp -R src/styles src/images dist/ ",
     "start": "rollup -c -w",
+    "analyze": "size-limit --why",
     "preversion": "yarn install && git add yarn.lock",
     "version": "yarn docs && git add docs && git add yarn.lock",
     "postversion": "git push && git push --tags && npm publish",
@@ -59,6 +60,8 @@
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.13.10",
     "@babel/node": "^7.0.0",
+    "@size-limit/preset-big-lib": "^4.10.2",
+    "size-limit": "^4.10.2",
     "@babel/plugin-external-helpers": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
@@ -123,6 +126,18 @@
   },
   "files": [
     "dist"
+  ],
+  "size-limit": [
+    {
+      "path": "dist/index.es.js",
+      "limit": "50 KB",
+      "import": "{ createComponent }"
+    },
+    {
+      "path": "dist/index.css",
+      "limit": "10 KB",
+      "webpack": false
+    }
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
