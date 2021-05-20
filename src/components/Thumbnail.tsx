@@ -48,7 +48,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
     }
   }, [id, handleClose]);
 
-  const imageToPreview = image.includes('.HEIC') ? image : imgSrc;
+  const imageToPreview = image?.includes('.HEIC') ? image : imgSrc;
 
   return (
     <div
