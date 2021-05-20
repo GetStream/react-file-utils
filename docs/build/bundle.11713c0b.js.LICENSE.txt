@@ -36,11 +36,11 @@
 
 /*! exports provided: FileIcon */
 
+/*! exports provided: FilePdfIcon, FileWordIcon, FilePowerPointIcon, FileExcelIcon, FileArchiveIcon, FileCodeIcon, FileAudioIcon, FileVideoIcon, FileImageIcon, FileAltIcon, FileFallbackIcon */
+
 /*! exports provided: FilePreviewer */
 
 /*! exports provided: FileUploadButton */
-
-/*! exports provided: FontAwesomeIcon */
 
 /*! exports provided: GenIcon, IconBase */
 
@@ -146,8 +146,6 @@
 
 /*! exports provided: distanceAndSkiddingToXY, default */
 
-/*! exports provided: far, prefix, faAddressBook, faAddressCard, faAngry, faArrowAltCircleDown, faArrowAltCircleLeft, faArrowAltCircleRight, faArrowAltCircleUp, faBell, faBellSlash, faBookmark, faBuilding, faCalendar, faCalendarAlt, faCalendarCheck, faCalendarMinus, faCalendarPlus, faCalendarTimes, faCaretSquareDown, faCaretSquareLeft, faCaretSquareRight, faCaretSquareUp, faChartBar, faCheckCircle, faCheckSquare, faCircle, faClipboard, faClock, faClone, faClosedCaptioning, faComment, faCommentAlt, faCommentDots, faComments, faCompass, faCopy, faCopyright, faCreditCard, faDizzy, faDotCircle, faEdit, faEnvelope, faEnvelopeOpen, faEye, faEyeSlash, faFile, faFileAlt, faFileArchive, faFileAudio, faFileCode, faFileExcel, faFileImage, faFilePdf, faFilePowerpoint, faFileVideo, faFileWord, faFlag, faFlushed, faFolder, faFolderOpen, faFontAwesomeLogoFull, faFrown, faFrownOpen, faFutbol, faGem, faGrimace, faGrin, faGrinAlt, faGrinBeam, faGrinBeamSweat, faGrinHearts, faGrinSquint, faGrinSquintTears, faGrinStars, faGrinTears, faGrinTongue, faGrinTongueSquint, faGrinTongueWink, faGrinWink, faHandLizard, faHandPaper, faHandPeace, faHandPointDown, faHandPointLeft, faHandPointRight, faHandPointUp, faHandPointer, faHandRock, faHandScissors, faHandSpock, faHandshake, faHdd, faHeart, faHospital, faHourglass, faIdBadge, faIdCard, faImage, faImages, faKeyboard, faKiss, faKissBeam, faKissWinkHeart, faLaugh, faLaughBeam, faLaughSquint, faLaughWink, faLemon, faLifeRing, faLightbulb, faListAlt, faMap, faMeh, faMehBlank, faMehRollingEyes, faMinusSquare, faMoneyBillAlt, faMoon, faNewspaper, faObjectGroup, faObjectUngroup, faPaperPlane, faPauseCircle, faPlayCircle, faPlusSquare, faQuestionCircle, faRegistered, faSadCry, faSadTear, faSave, faShareSquare, faSmile, faSmileBeam, faSmileWink, faSnowflake, faSquare, faStar, faStarHalf, faStickyNote, faStopCircle, faSun, faSurprise, faThumbsDown, faThumbsUp, faTimesCircle, faTired, faTrashAlt, faUser, faUserCircle, faWindowClose, faWindowMaximize, faWindowMinimize, faWindowRestore */
-
 /*! exports provided: fromEvent */
 
 /*! exports provided: generateRandomId, dataTransferItemsHaveFiles, dataTransferItemsToFiles, useHandleFileChangeWrapper */
@@ -157,8 +155,6 @@
 /*! exports provided: getRowKey, columns, default */
 
 /*! exports provided: hasInHash, getHash, getHashAsArray, getParameterByName */
-
-/*! exports provided: icon, noAuto, config, toHtml, layer, text, counter, library, dom, parse, findIconDefinition */
 
 /*! exports provided: isBrowser, default */
 
@@ -211,6 +207,8 @@
 /*! exports provided: unquote, getType, showSpaces */
 
 /*! exports provided: walk, childKeys */
+
+/*! exports provided: wordMimeTypes, excelMimeTypes, powerpointMimeTypes, archiveFileTypes, codeFileTypes */
 
 /*! no exports provided */
 
@@ -276,9 +274,9 @@
   !*** ./src/components/FileIcon.tsx ***!
   \*************************************/
 
-/*!**************************************!*\
-  !*** ./node_modules/buffer/index.js ***!
-  \**************************************/
+/*!*************************************!*\
+  !*** ./src/components/dataTypes.ts ***!
+  \*************************************/
 
 /*!**************************************!*\
   !*** ./node_modules/lodash/_Hash.js ***!
@@ -362,6 +360,10 @@
 
 /*!****************************************!*\
   !*** ./node_modules/lodash/memoize.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/components/FileIconSet.tsx ***!
   \****************************************/
 
 /*!****************************************!*\
@@ -953,10 +955,6 @@
   \**********************************************/
 
 /*!**********************************************!*\
-  !*** ./node_modules/tinycolor2/tinycolor.js ***!
-  \**********************************************/
-
-/*!**********************************************!*\
   !*** ./src/components/ImageUploadButton.tsx ***!
   \**********************************************/
 
@@ -970,10 +968,6 @@
 
 /*!***********************************************!*\
   !*** ./node_modules/doctrine/lib/doctrine.js ***!
-  \***********************************************/
-
-/*!***********************************************!*\
-  !*** ./node_modules/lodash.uniqueid/index.js ***!
   \***********************************************/
 
 /*!***********************************************!*\
@@ -1046,10 +1040,6 @@
 
 /*!************************************************!*\
   !*** ./node_modules/lodash/_objectToString.js ***!
-  \************************************************/
-
-/*!************************************************!*\
-  !*** ./node_modules/timers-browserify/main.js ***!
   \************************************************/
 
 /*!*************************************************!*\
@@ -1181,15 +1171,7 @@
   \***************************************************/
 
 /*!***************************************************!*\
-  !*** ./node_modules/react-file-icon/dist/main.js ***!
-  \***************************************************/
-
-/*!***************************************************!*\
   !*** ./node_modules/react-icons/lib/esm/index.js ***!
-  \***************************************************/
-
-/*!***************************************************!*\
-  !*** ./node_modules/setimmediate/setImmediate.js ***!
   \***************************************************/
 
 /*!***************************************************!*\
@@ -1219,10 +1201,6 @@
 /*!****************************************************!*\
   !*** ./node_modules/lodash/_isStrictComparable.js ***!
   \****************************************************/
-
-/*!*****************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/index.js ***!
-  \*****************************************************/
 
 /*!*****************************************************!*\
   !*** ./node_modules/buble/dist/buble-browser.es.js ***!
@@ -1485,10 +1463,6 @@
   \*********************************************************/
 
 /*!**********************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image.js ***!
-  \**********************************************************/
-
-/*!**********************************************************!*\
   !*** ./node_modules/core-js/internals/array-for-each.js ***!
   \**********************************************************/
 
@@ -1733,18 +1707,6 @@
   \***************************************************************/
 
 /*!***************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-exif.js ***!
-  \***************************************************************/
-
-/*!***************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-iptc.js ***!
-  \***************************************************************/
-
-/*!***************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-meta.js ***!
-  \***************************************************************/
-
-/*!***************************************************************!*\
   !*** ./node_modules/core-js/internals/inherit-if-required.js ***!
   \***************************************************************/
 
@@ -1770,14 +1732,6 @@
 
 /*!****************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/getWindow.js ***!
-  \****************************************************************/
-
-/*!****************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-fetch.js ***!
-  \****************************************************************/
-
-/*!****************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-scale.js ***!
   \****************************************************************/
 
 /*!****************************************************************!*\
@@ -1807,10 +1761,6 @@
 /*!****************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler.production.min.js ***!
   \****************************************************************/
-
-/*!*****************************************************************!*\
-  !*** ./node_modules/@fortawesome/react-fontawesome/index.es.js ***!
-  \*****************************************************************/
 
 /*!*****************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/instanceOf.js ***!
@@ -1917,14 +1867,6 @@
   \*******************************************************************/
 
 /*!*******************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-exif-map.js ***!
-  \*******************************************************************/
-
-/*!*******************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-iptc-map.js ***!
-  \*******************************************************************/
-
-/*!*******************************************************************!*\
   !*** ./node_modules/core-js/internals/document-create-element.js ***!
   \*******************************************************************/
 
@@ -1967,10 +1909,6 @@
 /*!*******************************************************************!*\
   !*** ./node_modules/unicode-property-aliases-ecmascript/index.js ***!
   \*******************************************************************/
-
-/*!********************************************************************!*\
-  !*** ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js ***!
-  \********************************************************************/
 
 /*!********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js ***!
@@ -2121,6 +2059,10 @@
   \*********************************************************************/
 
 /*!*********************************************************************!*\
+  !*** ./node_modules/node-libs-browser/node_modules/buffer/index.js ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
   !*** ./node_modules/postcss-loader/src!./src/styleguide-styles.css ***!
   \*********************************************************************/
 
@@ -2221,10 +2163,6 @@
   \*********************************************************************/
 
 /*!**********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-regular-svg-icons/index.es.js ***!
-  \**********************************************************************/
-
-/*!**********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js ***!
   \**********************************************************************/
 
@@ -2250,10 +2188,6 @@
 
 /*!**********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/modifiers/preventOverflow.js ***!
-  \**********************************************************************/
-
-/*!**********************************************************************!*\
-  !*** ./node_modules/blueimp-load-image/js/load-image-orientation.js ***!
   \**********************************************************************/
 
 /*!**********************************************************************!*\
@@ -4378,6 +4312,10 @@
 
 /*!******************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/TableOfContents/TableOfContents.js ***!
+  \******************************************************************************************************/
+
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FileIconSet.tsx ***!
   \******************************************************************************************************/
 
 /*!******************************************************************************************************!*\
