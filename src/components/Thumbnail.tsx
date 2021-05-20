@@ -21,7 +21,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
   useEffect(() => {
     // if upload is a base64 string set as image source, otherwise wait for CDN response
     if (!imgSrc && image?.startsWith('data:')) {
-      return setImgSrc(image);
+      setImgSrc(image);
     }
   }, [image]);
 
