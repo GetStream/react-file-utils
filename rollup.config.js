@@ -5,7 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 import url from '@rollup/plugin-url';
 import typescript from '@rollup/plugin-typescript';
 import replace from 'rollup-plugin-replace';
-
+import path from 'path';
 import postcssimport from 'postcss-easy-import';
 import cssnext from 'postcss-cssnext';
 import vars from 'postcss-simple-vars';
@@ -54,11 +54,6 @@ export default {
       format: 'cjs',
       sourcemap: true,
     },
-    {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: true,
-    },
   ],
   watch: {
     chokidar: false,
@@ -99,7 +94,7 @@ export default {
         color(),
       ],
       modules: false,
-      extract: true,
+      extract: path.resolve('dist/index.css'),
       minimize: true,
     }),
     url(),
