@@ -46,62 +46,75 @@ const variables = {
   rafDropdownBackground: '#313E47', // dark grey
 };
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
+export default [
+  {
+    input: 'src/index.ts',
+    output: [
+      {
+        file: pkg.main,
+        format: 'cjs',
+        sourcemap: true,
+      },
+    ],
+    watch: {
+      chokidar: false,
     },
-  ],
-  watch: {
-    chokidar: false,
+    external: [
+      'react-images',
+      'lodash',
+      'react-dropzone',
+      'url-parse',
+      'prop-types',
+      '@babel/runtime/regenerator',
+      '@babel/runtime/helpers/asyncToGenerator',
+      '@babel/runtime/helpers/objectWithoutProperties',
+      '@babel/runtime/helpers/toConsumableArray',
+      '@babel/runtime/helpers/objectSpread',
+      '@babel/runtime/helpers/extends',
+      '@babel/runtime/helpers/typeof',
+      '@babel/runtime/helpers/defineProperty',
+      '@babel/runtime/helpers/assertThisInitialized',
+      '@babel/runtime/helpers/inherits',
+      '@babel/runtime/helpers/getPrototypeOf',
+      '@babel/runtime/helpers/possibleConstructorReturn',
+      '@babel/runtime/helpers/createClass',
+      '@babel/runtime/helpers/classCallCheck',
+    ],
+    plugins: [
+      typescript(),
+      replace({
+        'process.env.NODE_ENV': JSON.stringify('production'),
+      }),
+      external(),
+      url(),
+      babel({
+        runtimeHelpers: true,
+        exclude: 'node_modules/**',
+      }),
+      commonjs(),
+    ],
   },
-  external: [
-    'react-images',
-    'lodash',
-    'react-dropzone',
-    'url-parse',
-    'prop-types',
-    '@babel/runtime/regenerator',
-    '@babel/runtime/helpers/asyncToGenerator',
-    '@babel/runtime/helpers/objectWithoutProperties',
-    '@babel/runtime/helpers/toConsumableArray',
-    '@babel/runtime/helpers/objectSpread',
-    '@babel/runtime/helpers/extends',
-    '@babel/runtime/helpers/typeof',
-    '@babel/runtime/helpers/defineProperty',
-    '@babel/runtime/helpers/assertThisInitialized',
-    '@babel/runtime/helpers/inherits',
-    '@babel/runtime/helpers/getPrototypeOf',
-    '@babel/runtime/helpers/possibleConstructorReturn',
-    '@babel/runtime/helpers/createClass',
-    '@babel/runtime/helpers/classCallCheck',
-  ],
-  plugins: [
-    typescript(),
-    replace({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
-    external(),
-    postcss({
-      plugins: [
-        vars({ variables }),
-        postcssimport(),
-        cssnext({ warnForDuplicates: false }),
-        nested(),
-        color(),
-      ],
-      modules: false,
-      extract: path.resolve('dist/index.css'),
-      minimize: true,
-    }),
-    url(),
-    babel({
-      runtimeHelpers: true,
-      exclude: 'node_modules/**',
-    }),
-    commonjs(),
-  ],
-};
+  {
+    input: 'src/styles/index.js',
+    output: [
+      {
+        file: 'dist/index.css',
+        format: 'cjs',
+      },
+    ],
+    plugins: [
+      postcss({
+        plugins: [
+          vars({ variables }),
+          postcssimport(),
+          cssnext({ warnForDuplicates: false }),
+          nested(),
+          color(),
+        ],
+        modules: false,
+        extract: path.resolve('dist/index.css'),
+        minimize: true,
+      }),
+    ],
+  },
+];
