@@ -26,11 +26,9 @@ module.exports = {
     link: {
       rel: 'stylesheet',
       type: 'text/css',
-      href: './dist/index.css',
     },
   },
   require: [
-    path.join(path.resolve(path.dirname('')), 'dist/index.css'),
     path.join(path.resolve(path.dirname('')), 'src/styleguide-styles.css'),
   ],
 };
