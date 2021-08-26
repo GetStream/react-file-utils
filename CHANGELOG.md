@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.1.4](https://github.com/GetStream/react-file-utils/releases/tag/v1.1.4) 2021-08-26
+
+### Chore
+
+- Change image `import` syntax to `require` [#40](https://github.com/GetStream/react-file-utils/pull/40)
+- Upgrade `react-dropzone` dependency [#40](https://github.com/GetStream/react-file-utils/pull/40)
+
+## [1.1.3](https://github.com/GetStream/react-file-utils/releases/tag/v1.1.3) 2021-07-09
+
+### Bug
+
+- Fix CSS build issue for NextJS apps [#38](https://github.com/GetStream/react-file-utils/pull/38)
+
+## [1.1.1](https://github.com/GetStream/react-file-utils/releases/tag/v1.1.1) 2021-07-01
+
+### Chore
+
+- Preserve modules for tree shaking optimization [#34](https://github.com/GetStream/react-file-utils/pull/34)
+- Add support for React 17 [#35](https://github.com/GetStream/react-file-utils/pull/35)
+
 ## [1.1.0](https://github.com/GetStream/react-file-utils/releases/tag/v1.1.0) 2021-05-20
 
 ### Chore
