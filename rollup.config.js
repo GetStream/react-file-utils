@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
+import image from '@rollup/plugin-image';
 import url from '@rollup/plugin-url';
 import typescript from '@rollup/plugin-typescript';
 import replace from 'rollup-plugin-replace';
@@ -81,6 +82,7 @@ export default [
       '@babel/runtime/helpers/classCallCheck',
     ],
     plugins: [
+      image(),
       typescript(),
       replace({
         'process.env.NODE_ENV': JSON.stringify('production'),
