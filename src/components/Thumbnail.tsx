@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
 import { IconButton } from './IconButton';
-const placeholder = require('../images/placeholder-generic.png');
+
+import placeholder from '../images/placeholder-generic.png';
 
 export type ThumbnailProps = {
   handleClose?: (id?: string) => void;
