@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback } from 'react';
 
 import { IconButton } from './IconButton';
 
@@ -17,22 +17,7 @@ const svg =
 export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
   const { id, image, size = 100, handleClose } = props;
 
-  const [imgSrc, setImgSrc] = useState<string | null>(null);
-
-  useEffect(() => {
-    // if upload is a base64 string set as image source, otherwise wait for CDN response
-    if (!imgSrc && image?.startsWith('data:')) {
-      setImgSrc(image);
-    }
-  }, [image]);
-
-  const onClose = useCallback(() => {
-    if (handleClose) {
-      handleClose(id);
-    }
-  }, [id, handleClose]);
-
-  const imageToPreview = image?.includes('.HEIC') ? image : imgSrc;
+  const onClose = useCallback(() => handleClose?.(id), [id, handleClose]);
 
   return (
     <div
@@ -46,11 +31,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = (props) => {
           </IconButton>
         ) : null}
       </div>
-      <img
-        src={imageToPreview || placeholder}
-        className="rfu-thumbnail__image"
-        alt=""
-      />
+      <img src={image || placeholder} className="rfu-thumbnail__image" alt="" />
     </div>
   );
 };
