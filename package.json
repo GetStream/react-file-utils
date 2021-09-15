@@ -25,7 +25,7 @@
     "lint": "prettier --list-different '**/*.{js,ts,tsx,md,json}' .eslintrc.json .prettierrc .babelrc && eslint '**/*.{js,ts,tsx,md}' --max-warnings 0 && stylelint '**/*.{css,scss}'",
     "lint-fix": "prettier --write '**/*.{js,ts,tsx,md,json}' .eslintrc.json .prettierrc .babelrc && eslint --fix '**/*.{js,ts,tsx,md}' --max-warnings 0 && stylelint --fix '**/*.{css,scss}'",
     "types": "tsc --strict",
-    "build": "rm -rf dist && yarn types && rollup -c && cp -R src/styles src/images dist/",
+    "build": "rm -rf dist && yarn types && rollup -c && cp -R src/styles dist/",
     "start": "tsc --watch",
     "analyze": "size-limit --why",
     "preversion": "yarn install && git add yarn.lock",
