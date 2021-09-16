@@ -38,6 +38,8 @@
 
 /*! exports provided: FilePdfIcon, FileWordIcon, FilePowerPointIcon, FileExcelIcon, FileArchiveIcon, FileCodeIcon, FileAudioIcon, FileVideoIcon, FileImageIcon, FileAltIcon, FileFallbackIcon */
 
+/*! exports provided: FilePlaceholder */
+
 /*! exports provided: FilePreviewer */
 
 /*! exports provided: FileUploadButton */
@@ -787,7 +789,7 @@
   \********************************************/
 
 /*!********************************************!*\
-  !*** ./src/images/placeholder-generic.png ***!
+  !*** ./src/components/FilePlaceholder.tsx ***!
   \********************************************/
 
 /*!*********************************************!*\
@@ -4360,6 +4362,10 @@
 
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/ToolbarButton/ToolbarButtonRenderer.js ***!
+  \**********************************************************************************************************/
+
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FilePlaceholder.tsx ***!
   \**********************************************************************************************************/
 
 /*!***********************************************************************************************************!*\
