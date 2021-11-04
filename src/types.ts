@@ -11,7 +11,9 @@ export type UploadInfo = {
 export type FileUpload = {
   file: {
     name: string;
-    size?: number | string;
+    lastModified?: number;
+    lastModifiedDate?: Date;
+    size?: number;
     type?: string;
     uri?: string;
   };
@@ -19,8 +21,12 @@ export type FileUpload = {
 
 export type ImageUpload = {
   file: {
+    name: string;
     height?: number;
-    name?: string;
+    lastModified?: number;
+    lastModifiedDate?: Date;
+    size?: number;
+    type?: string;
     uri?: string;
     width?: number;
   };
