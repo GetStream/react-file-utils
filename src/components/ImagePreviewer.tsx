@@ -61,7 +61,8 @@ export const ImagePreviewer: React.FC<ImagePreviewerProps> = (props) => {
             }`}
           >
             {image.state === 'failed' && (
-              <div
+              <button
+                aria-label="Retry upload"
                 className="rfu-image-previewer__retry"
                 dangerouslySetInnerHTML={{
                   __html:

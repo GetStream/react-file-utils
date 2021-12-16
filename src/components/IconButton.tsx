@@ -11,7 +11,11 @@ export const IconButton: React.FC<IconButtonProps> = ({
   onClick,
   children,
 }) => (
-  <div className="rfu-icon-button" role="button" onClick={onClick}>
+  <button
+    aria-label="Cancel upload"
+    className="rfu-icon-button"
+    onClick={onClick}
+  >
     {children}
-  </div>
+  </button>
 );

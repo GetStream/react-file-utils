@@ -14,7 +14,7 @@ export const ThumbnailPlaceholder: React.FC<ThumbnailPlaceholderProps> = (
 
   return (
     <ImageUploadButton handleFiles={handleFiles} multiple={multiple}>
-      <div role="button" className="rfu-thumbnail-placeholder">
+      <div className="rfu-thumbnail-placeholder">
         <svg
           width="14"
           height="15"
