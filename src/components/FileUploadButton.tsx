@@ -30,6 +30,7 @@ export const FileUploadButton: React.FC<FileUploadButtonProps> = ({
     <div className={className}>
       <label>
         <input
+          aria-label="File input"
           type="file"
           className="rfu-file-input"
           onChange={onFileChange}

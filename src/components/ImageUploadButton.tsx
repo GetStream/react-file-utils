@@ -25,6 +25,7 @@ export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
     <div className="rfu-image-upload-button">
       <label>
         <input
+          aria-label="Image input"
           type="file"
           className="rfu-image-input"
           onChange={onFileChange}
