@@ -4,7 +4,7 @@
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "lib": ["esnext", "DOM"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -28,8 +28,7 @@
     "declaration": true,
     "declarationDir": "./dist",
     "declarationMap": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": true
   },
   "parser": "@typescript-eslint/parser",
   "include": ["./src/**/*.tsx", "./src/**/*.ts", "./import-png.d.ts"],
