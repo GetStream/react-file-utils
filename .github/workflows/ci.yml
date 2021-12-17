@@ -34,6 +34,7 @@ jobs:
           yarn lint
           yarn docs
           yarn test
+          git reset --hard
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
