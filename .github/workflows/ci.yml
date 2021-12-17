@@ -6,8 +6,6 @@ on:
   pull_request:
     branches:
       - master
-
-on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
