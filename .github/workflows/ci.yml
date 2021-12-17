@@ -1,4 +1,11 @@
-name: test
+name: Tests and release
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 on: [push]
 jobs:
