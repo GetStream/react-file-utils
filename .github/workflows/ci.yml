@@ -29,3 +29,8 @@ jobs:
           yarn lint
           yarn docs
           yarn test
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
