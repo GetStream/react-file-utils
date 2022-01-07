@@ -55,6 +55,7 @@ export const ImageDropzone: React.FC<ImageDropzoneProps> = ({
           ${isDragReject ? 'rfu-dropzone--reject' : ''}
         `,
           })}
+          tabIndex={-1}
         >
           <div className="rfu-dropzone__notifier">
             <div className="rfu-dropzone__inner">
