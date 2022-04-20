@@ -11,14 +11,14 @@ export type FileUploadButtonProps = {
   resetOnChange?: boolean;
 };
 
-export const FileUploadButton: React.FC<FileUploadButtonProps> = ({
+export const FileUploadButton = ({
   disabled = false,
   multiple = false,
   children = <AttachmentIcon />,
   handleFiles,
   accepts,
   resetOnChange = true,
-}) => {
+}: React.PropsWithChildren<FileUploadButtonProps>) => {
   let className = 'rfu-file-upload-button';
   if (disabled) {
     className = `${className} rfu-file-upload-button--disabled`;

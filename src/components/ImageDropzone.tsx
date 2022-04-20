@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { PropsWithChildren, useCallback } from 'react';
 import Dropzone from 'react-dropzone';
 
 export type ImageDropzoneProps = {
@@ -16,14 +16,14 @@ export type ImageDropzoneProps = {
   maxNumberOfFiles?: number;
 };
 
-export const ImageDropzone: React.FC<ImageDropzoneProps> = ({
+export const ImageDropzone = ({
   handleFiles,
   maxNumberOfFiles,
   children,
   accept,
   multiple,
   disabled,
-}) => {
+}: PropsWithChildren<ImageDropzoneProps>) => {
   const handleDrop = useCallback(
     (accepted: File[]) => {
       if (!handleFiles) {

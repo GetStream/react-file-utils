@@ -7,10 +7,10 @@ export type IconButtonProps = {
 /**
  * This is simply a button wrapper, add's a div with `role="button"` and a onClick
  */
-export const IconButton: React.FC<IconButtonProps> = ({
+export const IconButton = ({
   onClick,
   children,
-}) => (
+}: React.PropsWithChildren<IconButtonProps>) => (
   <button
     aria-label="Cancel upload"
     className="rfu-icon-button"

@@ -10,7 +10,9 @@ export type ImageUploadButtonProps = {
   resetOnChange?: boolean;
 };
 
-export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
+export const ImageUploadButton = (
+  props: React.PropsWithChildren<ImageUploadButtonProps>,
+) => {
   const {
     multiple = false,
     disabled = false,
