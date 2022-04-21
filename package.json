@@ -66,8 +66,8 @@
     }
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^16.8.0",
-    "react-dom": "^17.0.0 || ^16.8.0"
+    "react": "^18.0.0 || ^17.0.0 || ^16.8.0",
+    "react-dom": "^18.0.0 || ^17.0.0 || ^16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -122,8 +122,8 @@
     "prettier": "^2.2.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^4.0.3",
-    "react-styleguidist": "^11.1.5",
+    "react-scripts": "^5.0.1",
+    "react-styleguidist": "^11.2.0",
     "rollup": "^1.27.11",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.1.8",
