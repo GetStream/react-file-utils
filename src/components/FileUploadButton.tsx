@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { AttachmentIcon } from './AttachmentIcon';
 import { useHandleFileChangeWrapper } from '../utils';
@@ -18,7 +18,7 @@ export const FileUploadButton = ({
   handleFiles,
   accepts,
   resetOnChange = true,
-}: React.PropsWithChildren<FileUploadButtonProps>) => {
+}: PropsWithChildren<FileUploadButtonProps>) => {
   let className = 'rfu-file-upload-button';
   if (disabled) {
     className = `${className} rfu-file-upload-button--disabled`;

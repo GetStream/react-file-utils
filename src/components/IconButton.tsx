@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 export type IconButtonProps = {
   onClick?: (e: React.SyntheticEvent) => void;
@@ -10,7 +10,7 @@ export type IconButtonProps = {
 export const IconButton = ({
   onClick,
   children,
-}: React.PropsWithChildren<IconButtonProps>) => (
+}: PropsWithChildren<IconButtonProps>) => (
   <button
     aria-label="Cancel upload"
     className="rfu-icon-button"
