@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ComponentType } from 'react';
 
 import {
   archiveFileTypes,
@@ -7,6 +7,7 @@ import {
   powerpointMimeTypes,
   wordMimeTypes,
 } from './dataTypes';
+
 import {
   FileAltIcon,
   FileArchiveIcon,
@@ -19,6 +20,7 @@ import {
   FilePowerPointIcon,
   FileVideoIcon,
   FileWordIcon,
+  IconProps,
 } from './FileIconSet';
 
 export type FileIconProps = {
@@ -31,7 +33,7 @@ export type FileIconProps = {
 
 // Partially based on: https://stackoverflow.com/a/4212908/2570866
 const mimeTypeToIconMap: {
-  [key: string]: React.FC;
+  [key: string]: ComponentType<IconProps>;
 } = {
   'application/pdf': FilePdfIcon,
 };
@@ -70,7 +72,7 @@ function mimeTypeToIcon(mimeType?: string) {
   return FileFallbackIcon;
 }
 
-export const FileIcon: React.FC<FileIconProps> = (props) => {
+export const FileIcon = (props: FileIconProps) => {
   const { big = false, mimeType, size = 50, sizeSmall = 20 } = props;
 
   const Icon = mimeTypeToIcon(mimeType);

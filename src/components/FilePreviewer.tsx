@@ -15,11 +15,11 @@ export type FilePreviewerProps = {
 /**
  * Component that displays files which are being uploaded
  */
-export const FilePreviewer: React.FC<FilePreviewerProps> = ({
+export const FilePreviewer = ({
   uploads,
   handleRemove,
   handleRetry,
-}) => (
+}: FilePreviewerProps) => (
   <div className="rfu-file-previewer">
     <ol>
       {uploads &&
