@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * An icon of a paperclip, which is used as the default icon for FileUploadButton
  */
-export const AttachmentIcon: React.FC = () => (
+export const AttachmentIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"

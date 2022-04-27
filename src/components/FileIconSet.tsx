@@ -4,7 +4,11 @@
  */
 import React from 'react';
 
-export const FilePdfIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export type IconProps = { size?: number };
+
+const DEFAULT_SIZE = 20;
+
+export const FilePdfIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-pdf"
     height={size}
@@ -19,7 +23,7 @@ export const FilePdfIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileWordIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileWordIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-word"
     height={size}
@@ -34,9 +38,7 @@ export const FileWordIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FilePowerPointIcon: React.FC<{ size?: number }> = ({
-  size = 20,
-}) => (
+export const FilePowerPointIcon = ({ size = DEFAULT_SIZE }) => (
   <svg
     className="rfu-file-icon--small fa-file-powerpoint"
     height={size}
@@ -51,7 +53,7 @@ export const FilePowerPointIcon: React.FC<{ size?: number }> = ({
   </svg>
 );
 
-export const FileExcelIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileExcelIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-excel"
     height={size}
@@ -66,7 +68,7 @@ export const FileExcelIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileArchiveIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileArchiveIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-archive"
     height={size}
@@ -81,7 +83,7 @@ export const FileArchiveIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileCodeIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileCodeIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-code"
     height={size}
@@ -96,7 +98,7 @@ export const FileCodeIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileAudioIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileAudioIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-audio"
     height={size}
@@ -111,7 +113,7 @@ export const FileAudioIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileVideoIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileVideoIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-video"
     height={size}
@@ -126,7 +128,7 @@ export const FileVideoIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileImageIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileImageIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-image"
     height={size}
@@ -141,7 +143,7 @@ export const FileImageIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileAltIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
+export const FileAltIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-alt"
     height={size}
@@ -156,9 +158,7 @@ export const FileAltIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
   </svg>
 );
 
-export const FileFallbackIcon: React.FC<{ size?: number }> = ({
-  size = 20,
-}) => (
+export const FileFallbackIcon = ({ size = DEFAULT_SIZE }: IconProps) => (
   <svg
     className="rfu-file-icon--small fa-file-fallback"
     height={size}

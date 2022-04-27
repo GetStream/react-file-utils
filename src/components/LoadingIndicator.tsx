@@ -7,20 +7,21 @@ export type LoadingIndicatorProps = {
   width?: number;
 };
 
-export const LoadingIndicator: React.FC<LoadingIndicatorProps> = (props) => {
-  const { size = 20, width = 2, backgroundColor, color } = props;
-
-  return (
-    <div
-      className="rfu-loading-indicator__spinner"
-      style={{
-        margin: '0 auto',
-        borderColor: backgroundColor ? backgroundColor : '',
-        borderTopColor: color ? color : '',
-        width: size ? size : '',
-        height: size ? size : '',
-        borderWidth: width ? width : '',
-      }}
-    />
-  );
-};
+export const LoadingIndicator = ({
+  size = 20,
+  width = 2,
+  backgroundColor,
+  color,
+}: LoadingIndicatorProps) => (
+  <div
+    className="rfu-loading-indicator__spinner"
+    style={{
+      margin: '0 auto',
+      borderColor: backgroundColor ? backgroundColor : '',
+      borderTopColor: color ? color : '',
+      width: size ? size : '',
+      height: size ? size : '',
+      borderWidth: width ? width : '',
+    }}
+  />
+);

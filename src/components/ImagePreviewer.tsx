@@ -22,16 +22,14 @@ export type ImagePreviewerProps = {
   disabled?: boolean;
 };
 
-export const ImagePreviewer: React.FC<ImagePreviewerProps> = (props) => {
-  const {
-    multiple = true,
-    disabled = false,
-    imageUploads,
-    handleRemove,
-    handleRetry,
-    handleFiles,
-  } = props;
-
+export const ImagePreviewer = ({
+  multiple = true,
+  disabled = false,
+  imageUploads,
+  handleRemove,
+  handleRetry,
+  handleFiles,
+}: ImagePreviewerProps) => {
   const onClose = useCallback(
     (id?: string) => {
       if (handleRemove) {

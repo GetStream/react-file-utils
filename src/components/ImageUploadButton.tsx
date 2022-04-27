@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { PictureIcon } from './PictureIcon';
 import { useHandleFileChangeWrapper } from '../utils';
@@ -10,15 +10,13 @@ export type ImageUploadButtonProps = {
   resetOnChange?: boolean;
 };
 
-export const ImageUploadButton: React.FC<ImageUploadButtonProps> = (props) => {
-  const {
-    multiple = false,
-    disabled = false,
-    handleFiles,
-    children = <PictureIcon />,
-    resetOnChange = false,
-  } = props;
-
+export const ImageUploadButton = ({
+  multiple = false,
+  disabled = false,
+  handleFiles,
+  children = <PictureIcon />,
+  resetOnChange = false,
+}: PropsWithChildren<ImageUploadButtonProps>) => {
   const onFileChange = useHandleFileChangeWrapper(resetOnChange, handleFiles);
 
   return (
