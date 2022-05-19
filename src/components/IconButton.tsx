@@ -1,7 +1,7 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, MouseEventHandler } from 'react';
 
 export type IconButtonProps = {
-  onClick?: (e: React.SyntheticEvent) => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 /**
