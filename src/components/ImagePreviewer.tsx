@@ -62,6 +62,7 @@ export const ImagePreviewer = ({
           >
             {image.state === 'failed' && (
               <button
+                type="button"
                 aria-label="Retry upload"
                 className="rfu-image-previewer__retry"
                 onClick={(event) => handleRetry?.(image.id, event)}

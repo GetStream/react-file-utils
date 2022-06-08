@@ -5,13 +5,15 @@ export type IconButtonProps = {
 };
 
 /**
- * This is simply a button wrapper, add's a div with `role="button"` and a onClick
+ * This is simply a button wrapper, adds a div with `role="button"` and a onClick
  */
 export const IconButton = ({
   onClick,
   children,
 }: PropsWithChildren<IconButtonProps>) => (
   <button
+    type="button"
+    data-testid="cancel-upload-button"
     aria-label="Cancel upload"
     className="rfu-icon-button"
     onClick={onClick}
