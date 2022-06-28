@@ -7,6 +7,7 @@ import {
   PictureIcon,
   ImageUploadButton,
   FileIcon,
+  FileIconV2,
   Thumbnail,
   ThumbnailPlaceholder,
   LoadingIndicator,
@@ -58,6 +59,12 @@ describe('ImageUploadButton', () => {
 describe('FileIcon', () => {
   it('is truthy', () => {
     expect(FileIcon).toBeTruthy();
+  });
+});
+
+describe('FileIconV2', () => {
+  it('is truthy', () => {
+    expect(FileIconV2).toBeTruthy();
   });
 });
 

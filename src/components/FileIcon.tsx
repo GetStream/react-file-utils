@@ -1,12 +1,6 @@
-import React, { ComponentType } from 'react';
+import React from 'react';
 
-import {
-  archiveFileTypes,
-  codeFileTypes,
-  excelMimeTypes,
-  powerpointMimeTypes,
-  wordMimeTypes,
-} from './dataTypes';
+import { mimeTypeToIcon } from './dataTypes';
 
 import {
   FileAltIcon,
@@ -20,10 +14,10 @@ import {
   FilePowerPointIcon,
   FileVideoIcon,
   FileWordIcon,
-  IconProps,
+  IconPropsV1,
 } from './FileIconSet';
 
-export type FileIconProps = {
+export type FileIconPropsV1 = {
   filename?: string;
   mimeType?: string;
   big?: boolean;
@@ -31,51 +25,25 @@ export type FileIconProps = {
   sizeSmall?: number; // small icon on file upload preview
 };
 
-// Partially based on: https://stackoverflow.com/a/4212908/2570866
-const mimeTypeToIconMap: {
-  [key: string]: ComponentType<IconProps>;
-} = {
-  'application/pdf': FilePdfIcon,
-};
-
-for (const type of wordMimeTypes) {
-  mimeTypeToIconMap[type] = FileWordIcon;
-}
-
-for (const type of excelMimeTypes) {
-  mimeTypeToIconMap[type] = FileExcelIcon;
-}
-
-for (const type of powerpointMimeTypes) {
-  mimeTypeToIconMap[type] = FilePowerPointIcon;
-}
-
-for (const type of archiveFileTypes) {
-  mimeTypeToIconMap[type] = FileArchiveIcon;
-}
-
-for (const type of codeFileTypes) {
-  mimeTypeToIconMap[type] = FileCodeIcon;
-}
-
-function mimeTypeToIcon(mimeType?: string) {
-  if (mimeType == null) return FileFallbackIcon;
-
-  const icon = mimeTypeToIconMap[mimeType];
-  if (icon) return icon;
-
-  if (mimeType.startsWith('audio/')) return FileAudioIcon;
-  if (mimeType.startsWith('video/')) return FileVideoIcon;
-  if (mimeType.startsWith('image/')) return FileImageIcon;
-  if (mimeType.startsWith('text/')) return FileAltIcon;
-
-  return FileFallbackIcon;
-}
-
-export const FileIcon = (props: FileIconProps) => {
+export const FileIcon = (props: FileIconPropsV1) => {
   const { big = false, mimeType, size = 50, sizeSmall = 20 } = props;
 
-  const Icon = mimeTypeToIcon(mimeType);
+  const Icon = mimeTypeToIcon<IconPropsV1>(
+    {
+      FilePdfIcon,
+      FileWordIcon,
+      FileExcelIcon,
+      FilePowerPointIcon,
+      FileArchiveIcon,
+      FileCodeIcon,
+      FileAltIcon,
+      FileImageIcon,
+      FileAudioIcon,
+      FileFallbackIcon,
+      FileVideoIcon,
+    },
+    mimeType,
+  );
 
   return <Icon size={big ? size : sizeSmall} />;
 };
