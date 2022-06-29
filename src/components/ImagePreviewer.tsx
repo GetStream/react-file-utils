@@ -73,6 +73,7 @@ export const ImagePreviewer = ({
 
             {url && (
               <Thumbnail
+                WrapperComponent={React.Fragment}
                 handleClose={(event) => onClose(image.id, event)}
                 image={url}
               />
