@@ -10,6 +10,7 @@ export * from './components/LoadingIndicator';
 export * from './components/PictureIcon';
 export * from './components/Thumbnail';
 export * from './components/ThumbnailPlaceholder';
+export * from './components/UploadButton';
 
 export * from './types';
 export { dataTransferItemsToFiles, dataTransferItemsHaveFiles } from './utils';
