@@ -1,22 +1,32 @@
-import React, { useCallback, MouseEventHandler } from 'react';
+import React, {
+  useCallback,
+  MouseEventHandler,
+  PropsWithChildren,
+  ComponentProps,
+  ComponentType,
+} from 'react';
 
 import { IconButton } from './IconButton';
 import { FilePlaceholder } from './FilePlaceholder';
 import { CloseIcon } from './CloseIcon';
 
 export type ThumbnailProps = {
-  handleClose?: MouseEventHandler<HTMLButtonElement>;
-  size?: number;
   image: string;
-  alt?: string;
-  id?: string;
-};
+  handleClose?: MouseEventHandler<HTMLButtonElement>;
+  WrapperComponent?: ComponentType<PropsWithChildren<Record<string, unknown>>>;
+} & Pick<ComponentProps<'img'>, 'alt'>;
+
+const DefaultThumbnailWrapper = ({
+  children,
+}: PropsWithChildren<Record<never, never>>) => (
+  <div className="rfu-thumbnail__wrapper">{children}</div>
+);
 
 export const Thumbnail = ({
   image,
-  size = 100,
   handleClose,
   alt,
+  WrapperComponent = DefaultThumbnailWrapper,
 }: ThumbnailProps) => {
   const onClose: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => handleClose?.(event),
@@ -24,16 +34,13 @@ export const Thumbnail = ({
   );
 
   return (
-    <div
-      className="rfu-thumbnail__wrapper"
-      style={{ width: size, height: size }}
-    >
+    <WrapperComponent>
       <div className="rfu-thumbnail__overlay">
-        {handleClose ? (
+        {handleClose && (
           <IconButton onClick={onClose}>
             <CloseIcon />
           </IconButton>
-        ) : null}
+        )}
       </div>
       {image ? (
         <img src={image} className="rfu-thumbnail__image" alt={alt ?? ''} />
@@ -43,6 +50,6 @@ export const Thumbnail = ({
           className="rfu-thumbnail__image"
         />
       )}
-    </div>
+    </WrapperComponent>
   );
 };
