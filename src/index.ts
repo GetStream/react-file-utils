@@ -1,6 +1,5 @@
 export * from './components/AttachmentIcon';
 export * from './components/FileIcon';
-export * from './components/FileIconV2';
 export * from './components/FilePreviewer';
 export * from './components/FileUploadButton';
 export * from './components/IconButton';
