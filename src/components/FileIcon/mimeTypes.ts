@@ -1,4 +1,11 @@
-import { ComponentType } from 'react';
+export type GeneralType = 'audio/' | 'video/' | 'image/' | 'text/';
+
+export type SupportedMimeType =
+  | typeof wordMimeTypes[number]
+  | typeof excelMimeTypes[number]
+  | typeof powerpointMimeTypes[number]
+  | typeof archiveFileTypes[number]
+  | typeof codeFileTypes[number];
 
 export const wordMimeTypes = [
   // Microsoft Word
@@ -154,76 +161,3 @@ export const codeFileTypes = [
   // .sh
   'application/x-shellscript',
 ];
-
-type IconComponents<IconProps> = {
-  FilePdfIcon: ComponentType<IconProps>;
-  FileWordIcon: ComponentType<IconProps>;
-  FileExcelIcon: ComponentType<IconProps>;
-  FilePowerPointIcon: ComponentType<IconProps>;
-  FileArchiveIcon: ComponentType<IconProps>;
-  FileCodeIcon: ComponentType<IconProps>;
-  FileAltIcon: ComponentType<IconProps>;
-  FileImageIcon: ComponentType<IconProps>;
-  FileAudioIcon: ComponentType<IconProps>;
-  FileFallbackIcon: ComponentType<IconProps>;
-  FileVideoIcon: ComponentType<IconProps>;
-};
-
-type MimeTypeToIconMap<IconProps> = {
-  [key: string]: ComponentType<IconProps>;
-};
-
-function generateMimeTypeToIconMap<IconProps>({
-  FilePdfIcon,
-  FileWordIcon,
-  FileExcelIcon,
-  FilePowerPointIcon,
-  FileArchiveIcon,
-  FileCodeIcon,
-}: IconComponents<IconProps>) {
-  const mimeTypeToIconMap: MimeTypeToIconMap<IconProps> = {
-    'application/pdf': FilePdfIcon,
-  };
-
-  for (const type of wordMimeTypes) {
-    mimeTypeToIconMap[type] = FileWordIcon;
-  }
-
-  for (const type of excelMimeTypes) {
-    mimeTypeToIconMap[type] = FileExcelIcon;
-  }
-
-  for (const type of powerpointMimeTypes) {
-    mimeTypeToIconMap[type] = FilePowerPointIcon;
-  }
-
-  for (const type of archiveFileTypes) {
-    mimeTypeToIconMap[type] = FileArchiveIcon;
-  }
-
-  for (const type of codeFileTypes) {
-    mimeTypeToIconMap[type] = FileCodeIcon;
-  }
-  return mimeTypeToIconMap;
-}
-
-export function mimeTypeToIcon<IconProps>(
-  IconComponents: IconComponents<IconProps>,
-  mimeType?: string,
-) {
-  if (mimeType == null) return IconComponents.FileFallbackIcon;
-
-  const mimeTypeToIconMap = generateMimeTypeToIconMap<IconProps>(
-    IconComponents,
-  );
-
-  const icon = mimeTypeToIconMap[mimeType];
-  if (icon) return icon;
-
-  if (mimeType.startsWith('audio/')) return IconComponents.FileAudioIcon;
-  if (mimeType.startsWith('video/')) return IconComponents.FileVideoIcon;
-  if (mimeType.startsWith('image/')) return IconComponents.FileImageIcon;
-  if (mimeType.startsWith('text/')) return IconComponents.FileAltIcon;
-
-  return IconComponents.FileFallbackIcon;
-}
