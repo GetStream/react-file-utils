@@ -1,235 +1,13 @@
-/*! exports provided: ACORN_OPTIONS, default */
-
-/*! exports provided: AttachmentIcon */
-
-/*! exports provided: BlockquoteRenderer, default */
-
-/*! exports provided: COMMON_MIME_TYPES, toFileWithPath */
-
-/*! exports provided: CheckboxRenderer, default */
-
-/*! exports provided: CodeRenderer, default */
-
-/*! exports provided: ComponentsListRenderer, default */
-
-/*! exports provided: DefaultContext, IconContext */
-
-/*! exports provided: Details, DetailsSummary */
-
-/*! exports provided: DetailsRenderer, default */
-
-/*! exports provided: DetailsSummaryRenderer, default */
-
-/*! exports provided: DisplayModes, ExampleModes, UsageModes */
-
-/*! exports provided: EXAMPLE_TAB_CODE_EDITOR, DOCS_TAB_USAGE, default */
-
-/*! exports provided: Editor, default */
-
-/*! exports provided: ErrorRenderer, default */
-
-/*! exports provided: ExamplePlaceholderRenderer, default */
-
-/*! exports provided: ExamplesRenderer, default */
-
-/*! exports provided: FILE_INVALID_TYPE, FILE_TOO_LARGE, FILE_TOO_SMALL, TOO_MANY_FILES, getInvalidTypeRejectionErr, getTooLargeRejectionErr, getTooSmallRejectionErr, TOO_MANY_FILES_REJECTION, fileAccepted, fileMatchSize, allFilesAccepted, isPropagationStopped, isEvtWithFiles, isKindFile, onDocumentDragOver, isIeOrEdge, composeEventHandlers */
-
-/*! exports provided: FileIcon */
-
-/*! exports provided: FilePdfIcon, FileWordIcon, FilePowerPointIcon, FileExcelIcon, FileArchiveIcon, FileCodeIcon, FileAudioIcon, FileVideoIcon, FileImageIcon, FileAltIcon, FileFallbackIcon */
-
-/*! exports provided: FilePlaceholder */
-
-/*! exports provided: FilePreviewer */
-
-/*! exports provided: FileUploadButton */
-
-/*! exports provided: GenIcon, IconBase */
-
-/*! exports provided: HrRenderer, default */
-
-/*! exports provided: IconButton */
-
-/*! exports provided: IconsManifest */
-
-/*! exports provided: IconsManifest, GenIcon, IconBase, DefaultContext, IconContext */
-
-/*! exports provided: ImageDropzone */
-
-/*! exports provided: ImagePreviewer */
-
-/*! exports provided: ImageUploadButton */
-
-/*! exports provided: LinkRenderer, default */
-
-/*! exports provided: ListRenderer, default */
-
-/*! exports provided: LoadingIndicator */
-
-/*! exports provided: LogoRenderer, default */
-
-/*! exports provided: Md3DRotation, MdAccessibility, MdAccessible, MdAccountBalance, MdAccountBalanceWallet, MdAccountBox, MdAccountCircle, MdAddShoppingCart, MdAlarm, MdAlarmAdd, MdAlarmOff, MdAlarmOn, MdAllOut, MdAndroid, MdAnnouncement, MdAspectRatio, MdAssessment, MdAssignment, MdAssignmentInd, MdAssignmentLate, MdAssignmentReturn, MdAssignmentReturned, MdAssignmentTurnedIn, MdAutorenew, MdBackup, MdBook, MdBookmark, MdBookmarkBorder, MdBugReport, MdBuild, MdCached, MdCameraEnhance, MdCardGiftcard, MdCardMembership, MdCardTravel, MdChangeHistory, MdCheckCircle, MdChromeReaderMode, MdClass, MdCode, MdCompareArrows, MdCopyright, MdCreditCard, MdDashboard, MdDateRange, MdDelete, MdDeleteForever, MdDescription, MdDns, MdDone, MdDoneAll, MdDonutLarge, MdDonutSmall, MdEject, MdEuroSymbol, MdEvent, MdEventSeat, MdExitToApp, MdExplore, MdExtension, MdFace, MdFavorite, MdFavoriteBorder, MdFeedback, MdFindInPage, MdFindReplace, MdFingerprint, MdFlightLand, MdFlightTakeoff, MdFlipToBack, MdFlipToFront, MdGTranslate, MdGavel, MdGetApp, MdGif, MdGrade, MdGroupWork, MdHelp, MdHelpOutline, MdHighlightOff, MdHistory, MdHome, MdHourglassEmpty, MdHourglassFull, MdHttp, MdHttps, MdImportantDevices, MdInfo, MdInfoOutline, MdInput, MdInvertColors, MdLabel, MdLabelOutline, MdLanguage, MdLaunch, MdLightbulbOutline, MdLineStyle, MdLineWeight, MdList, MdLock, MdLockOpen, MdLockOutline, MdLoyalty, MdMarkunreadMailbox, MdMotorcycle, MdNoteAdd, MdOfflinePin, MdOpacity, MdOpenInBrowser, MdOpenInNew, MdOpenWith, MdPageview, MdPanTool, MdPayment, MdPermCameraMic, MdPermContactCalendar, MdPermDataSetting, MdPermDeviceInformation, MdPermIdentity, MdPermMedia, MdPermPhoneMsg, MdPermScanWifi, MdPets, MdPictureInPicture, MdPictureInPictureAlt, MdPlayForWork, MdPolymer, MdPowerSettingsNew, MdPregnantWoman, MdPrint, MdQueryBuilder, MdQuestionAnswer, MdReceipt, MdRecordVoiceOver, MdRedeem, MdRemoveShoppingCart, MdReorder, MdReportProblem, MdRestore, MdRestorePage, MdRoom, MdRoundedCorner, MdRowing, MdSchedule, MdSearch, MdSettings, MdSettingsApplications, MdSettingsBackupRestore, MdSettingsBluetooth, MdSettingsBrightness, MdSettingsCell, MdSettingsEthernet, MdSettingsInputAntenna, MdSettingsInputComponent, MdSettingsInputComposite, MdSettingsInputHdmi, MdSettingsInputSvideo, MdSettingsOverscan, MdSettingsPhone, MdSettingsPower, MdSettingsRemote, MdSettingsVoice, MdShop, MdShopTwo, MdShoppingBasket, MdShoppingCart, MdSpeakerNotes, MdSpeakerNotesOff, MdSpellcheck, MdStars, MdStore, MdSubject, MdSupervisorAccount, MdSwapHoriz, MdSwapVert, MdSwapVerticalCircle, MdSystemUpdateAlt, MdTab, MdTabUnselected, MdTheaters, MdThumbDown, MdThumbUp, MdThumbsUpDown, MdTimeline, MdToc, MdToday, MdToll, MdTouchApp, MdTrackChanges, MdTranslate, MdTrendingDown, MdTrendingFlat, MdTrendingUp, MdTurnedIn, MdTurnedInNot, MdUpdate, MdVerifiedUser, MdViewAgenda, MdViewArray, MdViewCarousel, MdViewColumn, MdViewDay, MdViewHeadline, MdViewList, MdViewModule, MdViewQuilt, MdViewStream, MdViewWeek, MdVisibility, MdVisibilityOff, MdWatchLater, MdWork, MdYoutubeSearchedFor, MdZoomIn, MdZoomOut, MdAddAlert, MdError, MdErrorOutline, MdWarning, MdAddToQueue, MdAirplay, MdAlbum, MdArtTrack, MdAvTimer, MdBrandingWatermark, MdCallToAction, MdClosedCaption, MdEqualizer, MdExplicit, MdFastForward, MdFastRewind, MdFeaturedPlayList, MdFeaturedVideo, MdFiberDvr, MdFiberManualRecord, MdFiberNew, MdFiberPin, MdFiberSmartRecord, MdForward10, MdForward30, MdForward5, MdGames, MdHd, MdHearing, MdHighQuality, MdLibraryAdd, MdLibraryBooks, MdLibraryMusic, MdLoop, MdMic, MdMicNone, MdMicOff, MdMovie, MdMusicVideo, MdNewReleases, MdNotInterested, MdNote, MdPause, MdPauseCircleFilled, MdPauseCircleOutline, MdPlayArrow, MdPlayCircleFilled, MdPlayCircleOutline, MdPlaylistAdd, MdPlaylistAddCheck, MdPlaylistPlay, MdQueue, MdQueueMusic, MdQueuePlayNext, MdRadio, MdRecentActors, MdRemoveFromQueue, MdRepeat, MdRepeatOne, MdReplay10, MdReplay, MdReplay30, MdReplay5, MdShuffle, MdSkipNext, MdSkipPrevious, MdSlowMotionVideo, MdSnooze, MdSortByAlpha, MdStop, MdSubscriptions, MdSubtitles, MdSurroundSound, MdVideoCall, MdVideoLabel, MdVideoLibrary, MdVideocam, MdVideocamOff, MdVolumeDown, MdVolumeMute, MdVolumeOff, MdVolumeUp, MdWeb, MdWebAsset, MdBusiness, MdCall, MdCallEnd, MdCallMade, MdCallMerge, MdCallMissed, MdCallMissedOutgoing, MdCallReceived, MdCallSplit, MdChat, MdChatBubble, MdChatBubbleOutline, MdClearAll, MdComment, MdContactMail, MdContactPhone, MdContacts, MdDialerSip, MdDialpad, MdEmail, MdForum, MdImportContacts, MdImportExport, MdInvertColorsOff, MdLiveHelp, MdLocationOff, MdLocationOn, MdMailOutline, MdMessage, MdNoSim, MdPhone, MdPhonelinkErase, MdPhonelinkLock, MdPhonelinkRing, MdPhonelinkSetup, MdPortableWifiOff, MdPresentToAll, MdRingVolume, MdRssFeed, MdScreenShare, MdSpeakerPhone, MdStayCurrentLandscape, MdStayCurrentPortrait, MdStayPrimaryLandscape, MdStayPrimaryPortrait, MdStopScreenShare, MdSwapCalls, MdTextsms, MdVoicemail, MdVpnKey, MdAdd, MdAddBox, MdAddCircle, MdAddCircleOutline, MdArchive, MdBackspace, MdBlock, MdClear, MdContentCopy, MdContentCut, MdContentPaste, MdCreate, MdDeleteSweep, MdDrafts, MdFilterList, MdFlag, MdFontDownload, MdForward, MdGesture, MdInbox, MdLink, MdLowPriority, MdMail, MdMarkunread, MdMoveToInbox, MdNextWeek, MdRedo, MdRemove, MdRemoveCircle, MdRemoveCircleOutline, MdReply, MdReplyAll, MdReport, MdSave, MdSelectAll, MdSend, MdSort, MdTextFormat, MdUnarchive, MdUndo, MdWeekend, MdAccessAlarm, MdAccessAlarms, MdAccessTime, MdAddAlarm, MdAirplanemodeActive, MdAirplanemodeInactive, MdBattery20, MdBattery30, MdBattery50, MdBattery60, MdBattery80, MdBattery90, MdBatteryAlert, MdBatteryCharging20, MdBatteryCharging30, MdBatteryCharging50, MdBatteryCharging60, MdBatteryCharging80, MdBatteryCharging90, MdBatteryChargingFull, MdBatteryFull, MdBatteryStd, MdBatteryUnknown, MdBluetooth, MdBluetoothConnected, MdBluetoothDisabled, MdBluetoothSearching, MdBrightnessAuto, MdBrightnessHigh, MdBrightnessLow, MdBrightnessMedium, MdDataUsage, MdDeveloperMode, MdDevices, MdDvr, MdGpsFixed, MdGpsNotFixed, MdGpsOff, MdGraphicEq, MdLocationDisabled, MdLocationSearching, MdNetworkCell, MdNetworkWifi, MdNfc, MdScreenLockLandscape, MdScreenLockPortrait, MdScreenLockRotation, MdScreenRotation, MdSdStorage, MdSettingsSystemDaydream, MdSignalCellular0Bar, MdSignalCellular1Bar, MdSignalCellular2Bar, MdSignalCellular3Bar, MdSignalCellular4Bar, MdSignalCellularConnectedNoInternet0Bar, MdSignalCellularConnectedNoInternet1Bar, MdSignalCellularConnectedNoInternet2Bar, MdSignalCellularConnectedNoInternet3Bar, MdSignalCellularConnectedNoInternet4Bar, MdSignalCellularNoSim, MdSignalCellularNull, MdSignalCellularOff, MdSignalWifi0Bar, MdSignalWifi1Bar, MdSignalWifi1BarLock, MdSignalWifi2Bar, MdSignalWifi2BarLock, MdSignalWifi3Bar, MdSignalWifi3BarLock, MdSignalWifi4Bar, MdSignalWifi4BarLock, MdSignalWifiOff, MdStorage, MdUsb, MdWallpaper, MdWidgets, MdWifiLock, MdWifiTethering, MdAttachFile, MdAttachMoney, MdBorderAll, MdBorderBottom, MdBorderClear, MdBorderColor, MdBorderHorizontal, MdBorderInner, MdBorderLeft, MdBorderOuter, MdBorderRight, MdBorderStyle, MdBorderTop, MdBorderVertical, MdBubbleChart, MdDragHandle, MdFormatAlignCenter, MdFormatAlignJustify, MdFormatAlignLeft, MdFormatAlignRight, MdFormatBold, MdFormatClear, MdFormatColorFill, MdFormatColorReset, MdFormatColorText, MdFormatIndentDecrease, MdFormatIndentIncrease, MdFormatItalic, MdFormatLineSpacing, MdFormatListBulleted, MdFormatListNumbered, MdFormatPaint, MdFormatQuote, MdFormatShapes, MdFormatSize, MdFormatStrikethrough, MdFormatTextdirectionLToR, MdFormatTextdirectionRToL, MdFormatUnderlined, MdFunctions, MdHighlight, MdInsertChart, MdInsertComment, MdInsertDriveFile, MdInsertEmoticon, MdInsertInvitation, MdInsertLink, MdInsertPhoto, MdLinearScale, MdMergeType, MdModeComment, MdModeEdit, MdMonetizationOn, MdMoneyOff, MdMultilineChart, MdPieChart, MdPieChartOutlined, MdPublish, MdShortText, MdShowChart, MdSpaceBar, MdStrikethroughS, MdTextFields, MdTitle, MdVerticalAlignBottom, MdVerticalAlignCenter, MdVerticalAlignTop, MdWrapText, MdAttachment, MdCloud, MdCloudCircle, MdCloudDone, MdCloudDownload, MdCloudOff, MdCloudQueue, MdCloudUpload, MdCreateNewFolder, MdFileDownload, MdFileUpload, MdFolder, MdFolderOpen, MdFolderShared, MdCast, MdCastConnected, MdComputer, MdDesktopMac, MdDesktopWindows, MdDeveloperBoard, MdDeviceHub, MdDevicesOther, MdDock, MdGamepad, MdHeadset, MdHeadsetMic, MdKeyboard, MdKeyboardArrowDown, MdKeyboardArrowLeft, MdKeyboardArrowRight, MdKeyboardArrowUp, MdKeyboardBackspace, MdKeyboardCapslock, MdKeyboardHide, MdKeyboardReturn, MdKeyboardTab, MdKeyboardVoice, MdLaptop, MdLaptopChromebook, MdLaptopMac, MdLaptopWindows, MdMemory, MdMouse, MdPhoneAndroid, MdPhoneIphone, MdPhonelink, MdPhonelinkOff, MdPowerInput, MdRouter, MdScanner, MdSecurity, MdSimCard, MdSmartphone, MdSpeaker, MdSpeakerGroup, MdTablet, MdTabletAndroid, MdTabletMac, MdToys, MdTv, MdVideogameAsset, MdWatch, MdAddAPhoto, MdAddToPhotos, MdAdjust, MdAssistant, MdAssistantPhoto, MdAudiotrack, MdBlurCircular, MdBlurLinear, MdBlurOff, MdBlurOn, MdBrightness1, MdBrightness2, MdBrightness3, MdBrightness4, MdBrightness5, MdBrightness6, MdBrightness7, MdBrokenImage, MdBrush, MdBurstMode, MdCamera, MdCameraAlt, MdCameraFront, MdCameraRear, MdCameraRoll, MdCenterFocusStrong, MdCenterFocusWeak, MdCollections, MdCollectionsBookmark, MdColorLens, MdColorize, MdCompare, MdControlPoint, MdControlPointDuplicate, MdCrop169, MdCrop, MdCrop32, MdCrop54, MdCrop75, MdCropDin, MdCropFree, MdCropLandscape, MdCropOriginal, MdCropPortrait, MdCropRotate, MdCropSquare, MdDehaze, MdDetails, MdEdit, MdExposure, MdExposureNeg1, MdExposureNeg2, MdExposurePlus1, MdExposurePlus2, MdExposureZero, MdFilter1, MdFilter2, MdFilter, MdFilter3, MdFilter4, MdFilter5, MdFilter6, MdFilter7, MdFilter8, MdFilter9, MdFilter9Plus, MdFilterBAndW, MdFilterCenterFocus, MdFilterDrama, MdFilterFrames, MdFilterHdr, MdFilterNone, MdFilterTiltShift, MdFilterVintage, MdFlare, MdFlashAuto, MdFlashOff, MdFlashOn, MdFlip, MdGradient, MdGrain, MdGridOff, MdGridOn, MdHdrOff, MdHdrOn, MdHdrStrong, MdHdrWeak, MdHealing, MdImage, MdImageAspectRatio, MdIso, MdLandscape, MdLeakAdd, MdLeakRemove, MdLens, MdLinkedCamera, MdLooks, MdLooks3, MdLooks4, MdLooks5, MdLooks6, MdLooksOne, MdLooksTwo, MdLoupe, MdMonochromePhotos, MdMovieCreation, MdMovieFilter, MdMusicNote, MdNature, MdNaturePeople, MdNavigateBefore, MdNavigateNext, MdPalette, MdPanorama, MdPanoramaFishEye, MdPanoramaHorizontal, MdPanoramaVertical, MdPanoramaWideAngle, MdPhoto, MdPhotoAlbum, MdPhotoCamera, MdPhotoFilter, MdPhotoLibrary, MdPhotoSizeSelectActual, MdPhotoSizeSelectLarge, MdPhotoSizeSelectSmall, MdPictureAsPdf, MdPortrait, MdRemoveRedEye, MdRotate90DegreesCcw, MdRotateLeft, MdRotateRight, MdSlideshow, MdStraighten, MdStyle, MdSwitchCamera, MdSwitchVideo, MdTagFaces, MdTexture, MdTimelapse, MdTimer10, MdTimer, MdTimer3, MdTimerOff, MdTonality, MdTransform, MdTune, MdViewComfy, MdViewCompact, MdVignette, MdWbAuto, MdWbCloudy, MdWbIncandescent, MdWbIridescent, MdWbSunny, MdAddLocation, MdBeenhere, MdDirections, MdDirectionsBike, MdDirectionsBoat, MdDirectionsBus, MdDirectionsCar, MdDirectionsRailway, MdDirectionsRun, MdDirectionsSubway, MdDirectionsTransit, MdDirectionsWalk, MdEditLocation, MdEvStation, MdFlight, MdHotel, MdLayers, MdLayersClear, MdLocalActivity, MdLocalAirport, MdLocalAtm, MdLocalBar, MdLocalCafe, MdLocalCarWash, MdLocalConvenienceStore, MdLocalDining, MdLocalDrink, MdLocalFlorist, MdLocalGasStation, MdLocalGroceryStore, MdLocalHospital, MdLocalHotel, MdLocalLaundryService, MdLocalLibrary, MdLocalMall, MdLocalMovies, MdLocalOffer, MdLocalParking, MdLocalPharmacy, MdLocalPhone, MdLocalPizza, MdLocalPlay, MdLocalPostOffice, MdLocalPrintshop, MdLocalSee, MdLocalShipping, MdLocalTaxi, MdMap, MdMyLocation, MdNavigation, MdNearMe, MdPersonPin, MdPersonPinCircle, MdPinDrop, MdPlace, MdRateReview, MdRestaurant, MdRestaurantMenu, MdSatellite, MdStoreMallDirectory, MdStreetview, MdSubway, MdTerrain, MdTraffic, MdTrain, MdTram, MdTransferWithinAStation, MdZoomOutMap, MdApps, MdArrowBack, MdArrowDownward, MdArrowDropDown, MdArrowDropDownCircle, MdArrowDropUp, MdArrowForward, MdArrowUpward, MdCancel, MdCheck, MdChevronLeft, MdChevronRight, MdClose, MdExpandLess, MdExpandMore, MdFirstPage, MdFullscreen, MdFullscreenExit, MdLastPage, MdMenu, MdMoreHoriz, MdMoreVert, MdRefresh, MdSubdirectoryArrowLeft, MdSubdirectoryArrowRight, MdUnfoldLess, MdUnfoldMore, MdAdb, MdAirlineSeatFlat, MdAirlineSeatFlatAngled, MdAirlineSeatIndividualSuite, MdAirlineSeatLegroomExtra, MdAirlineSeatLegroomNormal, MdAirlineSeatLegroomReduced, MdAirlineSeatReclineExtra, MdAirlineSeatReclineNormal, MdBluetoothAudio, MdConfirmationNumber, MdDiscFull, MdDoNotDisturb, MdDoNotDisturbAlt, MdDoNotDisturbOff, MdDoNotDisturbOn, MdDriveEta, MdEnhancedEncryption, MdEventAvailable, MdEventBusy, MdEventNote, MdFolderSpecial, MdLiveTv, MdMms, MdMore, MdNetworkCheck, MdNetworkLocked, MdNoEncryption, MdOndemandVideo, MdPersonalVideo, MdPhoneBluetoothSpeaker, MdPhoneForwarded, MdPhoneInTalk, MdPhoneLocked, MdPhoneMissed, MdPhonePaused, MdPower, MdPriorityHigh, MdRvHookup, MdSdCard, MdSimCardAlert, MdSms, MdSmsFailed, MdSync, MdSyncDisabled, MdSyncProblem, MdSystemUpdate, MdTapAndPlay, MdTimeToLeave, MdVibration, MdVoiceChat, MdVpnLock, MdWc, MdWifi, MdAcUnit, MdAirportShuttle, MdAllInclusive, MdBeachAccess, MdBusinessCenter, MdCasino, MdChildCare, MdChildFriendly, MdFitnessCenter, MdFreeBreakfast, MdGolfCourse, MdHotTub, MdKitchen, MdPool, MdRoomService, MdSmokeFree, MdSmokingRooms, MdSpa, MdCake, MdDomain, MdGroup, MdGroupAdd, MdLocationCity, MdMood, MdMoodBad, MdNotifications, MdNotificationsActive, MdNotificationsNone, MdNotificationsOff, MdNotificationsPaused, MdPages, MdPartyMode, MdPeople, MdPeopleOutline, MdPerson, MdPersonAdd, MdPersonOutline, MdPlusOne, MdPoll, MdPublic, MdSchool, MdSentimentDissatisfied, MdSentimentNeutral, MdSentimentSatisfied, MdSentimentVeryDissatisfied, MdSentimentVerySatisfied, MdShare, MdWhatshot, MdCheckBox, MdCheckBoxOutlineBlank, MdIndeterminateCheckBox, MdRadioButtonChecked, MdRadioButtonUnchecked, MdStar, MdStarBorder, MdStarHalf */
-
-/*! exports provided: Node, Parser, Position, SourceLocation, TokContext, Token, TokenType, defaultOptions, getLineInfo, isIdentifierChar, isIdentifierStart, isNewLine, keywordTypes, lineBreak, lineBreakG, nonASCIIwhitespace, parse, parseExpressionAt, tokContexts, tokTypes, tokenizer, version */
-
-/*! exports provided: NotFoundRenderer, default */
-
-/*! exports provided: PictureIcon */
-
-/*! exports provided: PlaygroundErrorRenderer, default */
-
-/*! exports provided: PreRenderer, default */
-
-/*! exports provided: ReactComponentRenderer, default */
-
-/*! exports provided: SectionRenderer, default */
-
-/*! exports provided: SectionsRenderer, default */
-
-/*! exports provided: StyleGuideRenderer, default */
-
-/*! exports provided: Table, TableHead, TableBody, TableRow, TableCell */
-
-/*! exports provided: TableBodyRenderer, default */
-
-/*! exports provided: TableCellRenderer, default */
-
-/*! exports provided: TableHeadRenderer, default */
-
-/*! exports provided: TableOfContentsRenderer, default */
-
-/*! exports provided: TableRenderer, default */
-
-/*! exports provided: TableRowRenderer, default */
-
-/*! exports provided: Thumbnail */
-
-/*! exports provided: ThumbnailPlaceholder */
-
-/*! exports provided: VERSION, target, transform */
-
-/*! exports provided: VersionRenderer, default */
-
-/*! exports provided: WelcomeRenderer, default */
-
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __spreadArray, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
-
-/*! exports provided: applyStyles, arrow, computeStyles, eventListeners, flip, hide, offset, popperOffsets, preventOverflow */
-
-/*! exports provided: baseOverrides, inlineOverrides, Markdown, default */
-
-/*! exports provided: columns, default */
-
-/*! exports provided: compiler, default */
-
-/*! exports provided: createPopper, popperGenerator, defaultModifiers, detectOverflow */
-
-/*! exports provided: createPopper, popperGenerator, defaultModifiers, detectOverflow, createPopperLite, applyStyles, arrow, computeStyles, eventListeners, flip, hide, offset, popperOffsets, preventOverflow */
-
-/*! exports provided: decode, encode */
-
-/*! exports provided: default */
-
-/*! exports provided: default, Bundle, SourceMap */
-
-/*! exports provided: default, PreRenderer */
-
-/*! exports provided: default, RuleList, SheetsManager, SheetsRegistry, create, createGenerateId, createRule, getDynamicStyles, hasCSSTOMSupport, sheets, toCssValue */
-
-/*! exports provided: default, animateFill, createSingleton, delegate, followCursor, hideAll, inlinePositioning, roundArrow, sticky */
-
-/*! exports provided: default, columns */
-
-/*! exports provided: default, styles, ArgumentRenderer */
-
-/*! exports provided: default, useDropzone */
-
-/*! exports provided: default, useStyleGuideContext */
-
-/*! exports provided: distanceAndSkiddingToXY, default */
-
-/*! exports provided: fromEvent */
-
-/*! exports provided: generateRandomId, dataTransferItemsHaveFiles, dataTransferItemsToFiles, useHandleFileChangeWrapper */
-
-/*! exports provided: getMarkdown, default */
-
-/*! exports provided: getRowKey, columns, default */
-
-/*! exports provided: hasInHash, getHash, getHashAsArray, getParameterByName */
-
-/*! exports provided: isBrowser, default */
-
-/*! exports provided: isElement, isHTMLElement, isShadowRoot */
-
-/*! exports provided: mapToStyles, default */
-
-/*! exports provided: max, min, round */
-
-/*! exports provided: name, description, homepage, main, version, engines, directories, files, maintainers, repository, devDependencies, license, scripts, dependencies, default */
-
-/*! exports provided: popperGenerator, createPopper, detectOverflow */
-
-/*! exports provided: renderType, default */
-
-/*! exports provided: spaceFactor, space, color, fontFamily, fontSize, mq, borderRadius, maxWidth, sidebarWidth, buttonTextTransform */
-
-/*! exports provided: styles, ArgumentRenderer, default */
-
-/*! exports provided: styles, ArgumentsRenderer, default */
-
-/*! exports provided: styles, NameRenderer, default */
-
-/*! exports provided: styles, ParaRenderer, default */
-
-/*! exports provided: styles, PathlineRenderer, default */
-
-/*! exports provided: styles, PlaygroundRenderer, default */
-
-/*! exports provided: styles, RibbonRenderer, default */
-
-/*! exports provided: styles, TabButtonRenderer, default */
-
-/*! exports provided: styles, TableRenderer, default */
-
-/*! exports provided: styles, TextRenderer, default */
-
-/*! exports provided: styles, ToolbarButtonRenderer, default */
-
-/*! exports provided: styles, TypeRenderer, default */
-
-/*! exports provided: styles, default */
-
-/*! exports provided: tippy, default, useSingleton */
-
-/*! exports provided: top, bottom, right, left, auto, basePlacements, start, end, clippingParents, viewport, popper, reference, variationPlacements, placements, beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite, modifierPhases */
-
-/*! exports provided: top, bottom, right, left, auto, basePlacements, start, end, clippingParents, viewport, popper, reference, variationPlacements, placements, beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite, modifierPhases, applyStyles, arrow, computeStyles, eventListeners, flip, hide, offset, popperOffsets, preventOverflow, popperGenerator, detectOverflow, createPopperBase, createPopper, createPopperLite */
-
-/*! exports provided: unquote, getType, showSpaces */
-
-/*! exports provided: walk, childKeys */
-
-/*! exports provided: wordMimeTypes, excelMimeTypes, powerpointMimeTypes, archiveFileTypes, codeFileTypes */
-
-/*! no exports provided */
-
-/*! no static exports found */
-
 /*!**********************!*\
   !*** ./src/utils.ts ***!
   \**********************/
 
 /*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-
-/*!***********************************!*\
   !*** ./node_modules/lodash/eq.js ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./node_modules/util/util.js ***!
   \***********************************/
 
 /*!***********************************!*\
@@ -264,18 +42,6 @@
   !*** ./node_modules/lodash/keys.js ***!
   \*************************************/
 
-/*!*************************************!*\
-  !*** ./node_modules/react/index.js ***!
-  \*************************************/
-
-/*!*************************************!*\
-  !*** ./src/components/FileIcon.tsx ***!
-  \*************************************/
-
-/*!*************************************!*\
-  !*** ./src/components/dataTypes.ts ***!
-  \*************************************/
-
 /*!**************************************!*\
   !*** ./node_modules/lodash/_Hash.js ***!
   \**************************************/
@@ -293,19 +59,19 @@
   \**************************************/
 
 /*!**************************************!*\
+  !*** ./src/components/CloseIcon.tsx ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/components/RetryIcon.tsx ***!
+  \**************************************/
+
+/*!**************************************!*\
   !*** ./src/components/Thumbnail.tsx ***!
   \**************************************/
 
 /*!***************************************!*\
   !*** ./node_modules/assert/assert.js ***!
-  \***************************************/
-
-/*!***************************************!*\
-  !*** ./node_modules/ieee754/index.js ***!
-  \***************************************/
-
-/*!***************************************!*\
-  !*** ./node_modules/isarray/index.js ***!
   \***************************************/
 
 /*!***************************************!*\
@@ -361,10 +127,6 @@
   \****************************************/
 
 /*!****************************************!*\
-  !*** ./src/components/FileIconSet.tsx ***!
-  \****************************************/
-
-/*!****************************************!*\
   !*** ./src/components/PictureIcon.tsx ***!
   \****************************************/
 
@@ -374,10 +136,6 @@
 
 /*!*****************************************!*\
   !*** ./node_modules/acorn-jsx/xhtml.js ***!
-  \*****************************************/
-
-/*!*****************************************!*\
-  !*** ./node_modules/base64-js/index.js ***!
   \*****************************************/
 
 /*!*****************************************!*\
@@ -478,14 +236,6 @@
 
 /*!*****************************************!*\
   !*** ./node_modules/lodash/toString.js ***!
-  \*****************************************/
-
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
-
-/*!*****************************************!*\
-  !*** ./node_modules/react-dom/index.js ***!
   \*****************************************/
 
 /*!*****************************************!*\
@@ -606,6 +356,10 @@
 
 /*!******************************************!*\
   !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./src/components/FileIcon/index.ts ***!
   \******************************************/
 
 /*!******************************************!*\
@@ -789,6 +543,10 @@
   \********************************************/
 
 /*!********************************************!*\
+  !*** ./src/components/FileIcon/iconMap.ts ***!
+  \********************************************/
+
+/*!********************************************!*\
   !*** ./src/components/FilePlaceholder.tsx ***!
   \********************************************/
 
@@ -953,6 +711,14 @@
   \**********************************************/
 
 /*!**********************************************!*\
+  !*** ./src/components/FileIcon/FileIcon.tsx ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./src/components/FileIcon/mimeTypes.ts ***!
+  \**********************************************/
+
+/*!**********************************************!*\
   !*** ./src/components/ImageUploadButton.tsx ***!
   \**********************************************/
 
@@ -1093,10 +859,6 @@
   \**************************************************/
 
 /*!**************************************************!*\
-  !*** ./node_modules/@popperjs/core/lib/index.js ***!
-  \**************************************************/
-
-/*!**************************************************!*\
   !*** ./node_modules/core-js/internals/export.js ***!
   \**************************************************/
 
@@ -1200,6 +962,14 @@
   !*** ./node_modules/lodash/_isStrictComparable.js ***!
   \****************************************************/
 
+/*!****************************************************!*\
+  !*** ./src/components/FileIcon/FileIconSet/v1.tsx ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/FileIcon/FileIconSet/v2.tsx ***!
+  \****************************************************/
+
 /*!*****************************************************!*\
   !*** ./node_modules/buble/dist/buble-browser.es.js ***!
   \*****************************************************/
@@ -1282,6 +1052,10 @@
 
 /*!******************************************************!*\
   !*** ./node_modules/regexpu-core/rewrite-pattern.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/util/support/isBufferBrowser.js ***!
   \******************************************************/
 
 /*!*******************************************************!*\
@@ -1380,16 +1154,8 @@
   !*** ./node_modules/prismjs/components/prism-clike.js ***!
   \********************************************************/
 
-/*!********************************************************!*\
-  !*** ./node_modules/react/cjs/react.production.min.js ***!
-  \********************************************************/
-
 /*!*********************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/createPopper.js ***!
-  \*********************************************************/
-
-/*!*********************************************************!*\
-  !*** ./node_modules/@popperjs/core/lib/utils/format.js ***!
   \*********************************************************/
 
 /*!*********************************************************!*\
@@ -1518,10 +1284,6 @@
 
 /*!***********************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/utils/debounce.js ***!
-  \***********************************************************/
-
-/*!***********************************************************!*\
-  !*** ./node_modules/@popperjs/core/lib/utils/uniqueBy.js ***!
   \***********************************************************/
 
 /*!***********************************************************!*\
@@ -1720,6 +1482,10 @@
   !*** ./node_modules/react-styleguidist/lib/scripts/consts.js ***!
   \***************************************************************/
 
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/createClass.js ***!
   \****************************************************************/
@@ -1749,12 +1515,12 @@
   \****************************************************************/
 
 /*!****************************************************************!*\
-  !*** ./node_modules/react-dom/cjs/react-dom.production.min.js ***!
-  \****************************************************************/
-
-/*!****************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler.production.min.js ***!
   \****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ../chat/SDK/stream-chat-react/node_modules/react/index.js ***!
+  \*****************************************************************/
 
 /*!*****************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/instanceOf.js ***!
@@ -1822,10 +1588,6 @@
 
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/internals/object-define-property.js ***!
-  \******************************************************************/
-
-/*!******************************************************************!*\
-  !*** ./node_modules/node-libs-browser/node_modules/util/util.js ***!
   \******************************************************************/
 
 /*!******************************************************************!*\
@@ -1922,10 +1684,6 @@
 
 /*!********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/modifiers/popperOffsets.js ***!
-  \********************************************************************/
-
-/*!********************************************************************!*\
-  !*** ./node_modules/@popperjs/core/lib/utils/validateModifiers.js ***!
   \********************************************************************/
 
 /*!********************************************************************!*\
@@ -2028,6 +1786,14 @@
   !*** ./node_modules/regenerate-unicode-properties/Script/Tamil.js ***!
   \********************************************************************/
 
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ../chat/SDK/stream-chat-react/node_modules/react-dom/index.js ***!
+  \*********************************************************************/
+
 /*!*********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js ***!
   \*********************************************************************/
@@ -2050,14 +1816,6 @@
 
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/internals/well-known-symbol-wrapped.js ***!
-  \*********************************************************************/
-
-/*!*********************************************************************!*\
-  !*** ./node_modules/node-libs-browser/node_modules/buffer/index.js ***!
-  \*********************************************************************/
-
-/*!*********************************************************************!*\
-  !*** ./node_modules/postcss-loader/src!./src/styleguide-styles.css ***!
   \*********************************************************************/
 
 /*!*********************************************************************!*\
@@ -2156,6 +1914,10 @@
   !*** ./node_modules/regenerate-unicode-properties/Script/Yezidi.js ***!
   \*********************************************************************/
 
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+
 /*!**********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js ***!
   \**********************************************************************/
@@ -2198,10 +1960,6 @@
 
 /*!**********************************************************************!*\
   !*** ./node_modules/jss-plugin-nested/dist/jss-plugin-nested.esm.js ***!
-  \**********************************************************************/
-
-/*!**********************************************************************!*\
-  !*** ./node_modules/regenerate-unicode-properties sync ^\.\/.*\.js$ ***!
   \**********************************************************************/
 
 /*!**********************************************************************!*\
@@ -2304,6 +2062,10 @@
   !*** ./node_modules/regenerate-unicode-properties/Script/Tirhuta.js ***!
   \**********************************************************************/
 
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+
 /*!***********************************************************************!*\
   !*** ./node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js ***!
   \***********************************************************************/
@@ -2326,6 +2088,10 @@
 
 /*!***********************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/styles/setupjss.js ***!
+  \***********************************************************************/
+
+/*!***********************************************************************!*\
+  !*** ./node_modules/regenerate-unicode-properties/ sync ^\.\/.*\.js$ ***!
   \***********************************************************************/
 
 /*!***********************************************************************!*\
@@ -2758,6 +2524,10 @@
 
 /*!******************************************************************************!*\
   !*** ./node_modules/jss-plugin-camel-case/dist/jss-plugin-camel-case.esm.js ***!
+  \******************************************************************************/
+
+/*!******************************************************************************!*\
+  !*** ./node_modules/postcss-loader/src/index.js!./src/styleguide-styles.css ***!
   \******************************************************************************/
 
 /*!******************************************************************************!*\
@@ -3380,6 +3150,10 @@
   !*** ./node_modules/regenerate-unicode-properties/Script_Extensions/Ugaritic.js ***!
   \**********************************************************************************/
 
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+
 /*!***********************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/Editor/index.js ***!
   \***********************************************************************************/
@@ -3471,6 +3245,10 @@
 /*!***********************************************************************************!*\
   !*** ./node_modules/regenerate-unicode-properties/Script_Extensions/Sundanese.js ***!
   \***********************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ../chat/SDK/stream-chat-react/node_modules/react/cjs/react.production.min.js ***!
+  \************************************************************************************/
 
 /*!************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/Context/index.js ***!
@@ -3595,10 +3373,6 @@
 /*!************************************************************************************!*\
   !*** ./node_modules/regenerate-unicode-properties/Script_Extensions/Saurashtra.js ***!
   \************************************************************************************/
-
-/*!*************************************************************************************!*\
-  !*** ./node_modules/node-libs-browser/node_modules/util/support/isBufferBrowser.js ***!
-  \*************************************************************************************/
 
 /*!*************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/Argument/index.js ***!
@@ -4049,6 +3823,10 @@
   \*******************************************************************************************/
 
 /*!********************************************************************************************!*\
+  !*** ../chat/SDK/stream-chat-react/node_modules/react-dom/cjs/react-dom.production.min.js ***!
+  \********************************************************************************************/
+
+/*!********************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/Components/Components.js ***!
   \********************************************************************************************/
 
@@ -4090,10 +3868,6 @@
 
 /*!********************************************************************************************!*\
   !*** ./node_modules/regenerate-unicode-properties/Script_Extensions/Caucasian_Albanian.js ***!
-  \********************************************************************************************/
-
-/*!********************************************************************************************!*\
-  !*** multi ./src/styleguide-styles.css ./node_modules/react-styleguidist/lib/client/index ***!
   \********************************************************************************************/
 
 /*!*********************************************************************************************!*\
@@ -4256,10 +4030,6 @@
   !*** ./node_modules/react-styleguidist/lib/client/utils/filterComponentsInSectionsByExactName.js ***!
   \***************************************************************************************************/
 
-/*!***************************************************************************************************!*\
-  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FileIcon.tsx ***!
-  \***************************************************************************************************/
-
 /*!****************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/Components/ComponentsRenderer.js ***!
   \****************************************************************************************************/
@@ -4282,6 +4052,14 @@
 
 /*!****************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/StyleGuide/StyleGuideRenderer.js ***!
+  \****************************************************************************************************/
+
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/CloseIcon.tsx ***!
+  \****************************************************************************************************/
+
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/RetryIcon.tsx ***!
   \****************************************************************************************************/
 
 /*!****************************************************************************************************!*\
@@ -4310,10 +4088,6 @@
 
 /*!******************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/TableOfContents/TableOfContents.js ***!
-  \******************************************************************************************************/
-
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FileIconSet.tsx ***!
   \******************************************************************************************************/
 
 /*!******************************************************************************************************!*\
@@ -4389,6 +4163,10 @@
   \************************************************************************************************************/
 
 /*!************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FileIcon/FileIcon.tsx ***!
+  \************************************************************************************************************/
+
+/*!************************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/ImageUploadButton.tsx ***!
   \************************************************************************************************************/
 
@@ -4412,6 +4190,14 @@
   !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/ThumbnailPlaceholder.tsx ***!
   \***************************************************************************************************************/
 
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FileIcon/FileIconSet/v1.tsx ***!
+  \******************************************************************************************************************/
+
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/props-loader.js!./src/components/FileIcon/FileIconSet/v2.tsx ***!
+  \******************************************************************************************************************/
+
 /*!********************************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/client/rsg-components/ExamplePlaceholder/ExamplePlaceholderRenderer.js ***!
   \********************************************************************************************************************/
@@ -4424,10 +4210,6 @@
   !*** ./node_modules/react-styleguidist/lib/loaders/styleguide-loader.js!./node_modules/react-styleguidist/lib/client/index.js ***!
   \********************************************************************************************************************************/
 
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=FileIcon&file=.%2FFileIcon.tsx&shouldShowDefaultExample=false!./src/components/FileIcon.md ***!
-  \*******************************************************************************************************************************************************************************/
-
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=Thumbnail&file=.%2FThumbnail.tsx&shouldShowDefaultExample=false!./src/components/Thumbnail.md ***!
   \**********************************************************************************************************************************************************************************/
@@ -4435,6 +4217,10 @@
 /*!*************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=IconButton&file=.%2FIconButton.tsx&shouldShowDefaultExample=false!./src/components/IconButton.md ***!
   \*************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=FileIcon&file=.%2FFileIcon.tsx&shouldShowDefaultExample=false!./src/components/FileIcon/FileIcon.md ***!
+  \****************************************************************************************************************************************************************************************/
 
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/react-styleguidist/lib/loaders/examples-loader.js?displayName=PictureIcon&file=.%2FPictureIcon.tsx&shouldShowDefaultExample=false!./src/components/PictureIcon.md ***!
