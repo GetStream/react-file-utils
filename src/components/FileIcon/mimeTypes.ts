@@ -1,3 +1,12 @@
+export type GeneralType = 'audio/' | 'video/' | 'image/' | 'text/';
+
+export type SupportedMimeType =
+  | typeof wordMimeTypes[number]
+  | typeof excelMimeTypes[number]
+  | typeof powerpointMimeTypes[number]
+  | typeof archiveFileTypes[number]
+  | typeof codeFileTypes[number];
+
 export const wordMimeTypes = [
   // Microsoft Word
   // .doc .dot
@@ -124,6 +133,7 @@ export const codeFileTypes = [
   'text/css',
   // .js
   'application/x-javascript',
+  'text/javascript',
   // .json
   'application/json',
   // .py

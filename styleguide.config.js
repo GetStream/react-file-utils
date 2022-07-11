@@ -16,7 +16,7 @@ module.exports = {
   sections: [
     {
       name: 'UI Components',
-      components: 'src/components/*.tsx',
+      components: 'src/components/**/*.tsx',
       exampleMode: 'collapse',
       usageMode: 'expand',
     },
