@@ -4,8 +4,10 @@ import { FileIcon } from './FileIcon';
 import { LoadingIndicator } from './LoadingIndicator';
 
 import type { FileUpload } from '../types';
+import { FileIconProps } from './FileIcon/FileIcon';
 
 export type FilePreviewerProps = {
+  fileIconProps?: FileIconProps;
   uploads?: FileUpload[];
   handleRemove?: (id: string) => void;
   handleRetry?: (id: string) => void;
@@ -16,6 +18,7 @@ export type FilePreviewerProps = {
  * Component that displays files which are being uploaded
  */
 export const FilePreviewer = ({
+  fileIconProps = {},
   uploads,
   handleRemove,
   handleRetry,
@@ -33,8 +36,7 @@ export const FilePreviewer = ({
             upload.state === 'failed' ? 'rfu-file-previewer__file--failed' : ''
           }`}
         >
-          <FileIcon mimeType={upload.file.type} filename={upload.file.name} />
-
+          <FileIcon mimeType={upload.file.type} {...fileIconProps} />
           <a href={upload.url} download>
             {upload.file.name}
             {upload.state === 'failed' && (
