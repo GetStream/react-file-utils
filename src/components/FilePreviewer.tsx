@@ -37,7 +37,6 @@ export const FilePreviewer = ({
           }`}
         >
           <FileIcon mimeType={upload.file.type} {...fileIconProps} />
-
           <a href={upload.url} download>
             {upload.file.name}
             {upload.state === 'failed' && (
