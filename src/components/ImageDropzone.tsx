@@ -14,6 +14,8 @@ export type ImageDropzoneProps = {
    */
   accept?: string | string[];
   maxNumberOfFiles?: number;
+  /** Change the text that appears when dragging a file over the dropzone */
+  dragNotification?: string | React.ReactNode;
 };
 
 export const ImageDropzone = ({
@@ -23,6 +25,7 @@ export const ImageDropzone = ({
   accept,
   multiple,
   disabled,
+  dragNotification = 'Drag your files here to add to your post',
 }: PropsWithChildren<ImageDropzoneProps>) => {
   const handleDrop = useCallback(
     (accepted: File[]) => {
@@ -72,7 +75,7 @@ export const ImageDropzone = ({
               fillRule="nonzero"
             />
           </svg>
-          <p>Drag your files here to add to your post</p>
+          <p>{dragNotification}</p>
         </div>
       </div>
       {children}
